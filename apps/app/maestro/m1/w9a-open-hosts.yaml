@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: host-switcher
+- waitForAnimationToEnd
+- assertVisible: Hosts
+- assertVisible: Add a host…

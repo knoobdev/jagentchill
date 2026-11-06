@@ -1,0 +1,25 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 50%, 22%
+    end: 50%, 80%
+    duration: 400
+- swipe:
+    start: 50%, 22%
+    end: 50%, 80%
+    duration: 400
+- swipe:
+    start: 50%, 22%
+    end: 50%, 80%
+    duration: 400
+- swipe:
+    start: 50%, 22%
+    end: 50%, 80%
+    duration: 400
+- tapOn:
+    id: project-open-.*
+- waitForAnimationToEnd
+- assertVisible: New project
+- tapOn:
+    id: open-export
+- waitForAnimationToEnd

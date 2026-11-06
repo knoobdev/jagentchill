@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: { id: pairing-verification-code }
+- inputText: "3"
+- inputText: "5"
+- inputText: "7"
+- inputText: "7"
+- inputText: "8"
+- inputText: "8"
+- tapOn: Pair
+- waitForAnimationToEnd
+- assertVisible: New project
+- assertVisible: { id: home-composer-dock }

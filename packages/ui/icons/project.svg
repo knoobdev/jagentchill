@@ -1,0 +1,7 @@
+<!-- Project-owned icons the outline set of the design file lacks, on the same 24 px grid with the same 1.5 px stroke. -->
+<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="eye-off" viewBox="0 0 24 24"><path vector-effect="non-scaling-stroke" d="M4 4l16 16M9.9 5.3A9.6 9.6 0 0 1 12 5c5.5 0 9 7 9 7a15.6 15.6 0 0 1-2.6 3.4M6.3 6.6A15.4 15.4 0 0 0 3 12s3.5 7 9 7a9.3 9.3 0 0 0 4.2-1M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+<symbol id="check-check" viewBox="0 0 24 24"><path vector-effect="non-scaling-stroke" d="M2.5 12.5l4.5 4.5L16 8M12 16l1 1 9-9"/></symbol>
+<symbol id="ring" viewBox="0 0 24 24"><circle vector-effect="non-scaling-stroke" cx="12" cy="12" r="7"/></symbol>
+<symbol id="triangle" viewBox="0 0 24 24"><path vector-effect="non-scaling-stroke" d="M12 4.5l8.5 15h-17z"/></symbol>
+</svg>

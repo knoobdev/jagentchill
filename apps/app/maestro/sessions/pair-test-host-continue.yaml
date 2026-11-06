@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code
+- takeScreenshot: pairing-code.png

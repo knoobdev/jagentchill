@@ -1,0 +1,18 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 42%, 10%
+- assertVisible: This device only
+- assertVisible: Add a host…
+- tapOn:
+    text: This device only
+- assertVisible: New project
+- tapOn:
+    point: 86%, 55%
+- assertVisible: Connect to JAgentChill
+- assertVisible: Scan QR code
+- assertVisible: Direct connection
+- assertVisible: Paste pairing link
+- tapOn:
+    text: Use this device only
+- assertVisible: New project

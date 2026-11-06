@@ -1,0 +1,4 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Close
+- assertVisible: Connect to JAgentChill

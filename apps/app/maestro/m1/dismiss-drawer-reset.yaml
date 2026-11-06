@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 90%, 50%
+- assertNotVisible: Help
+- assertVisible: Projects

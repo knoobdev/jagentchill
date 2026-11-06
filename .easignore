@@ -1,0 +1,16 @@
+# What a cloud build of the mobile app may receive. EAS uses this file INSTEAD of .gitignore.
+# Never uploaded: local runs and data, secrets, briefs, build outputs.
+.dev/
+.refs/
+.claude/
+.serena/
+node_modules/
+dist/
+.DS_Store
+/packages/render-wasm/target/
+/openspec/
+/docs/
+/apps/app/e2e/
+/apps/desktop/e2e/
+/server/test/
+*.log

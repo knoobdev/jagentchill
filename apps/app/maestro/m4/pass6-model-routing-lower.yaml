@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- scroll
+- assertVisible: Enable Screenwriter
+- assertVisible: Expand Screenwriter

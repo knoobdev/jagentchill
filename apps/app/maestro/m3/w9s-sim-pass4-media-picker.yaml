@@ -1,0 +1,28 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- swipe:
+    start: 50%, 12%
+    end: 50%, 88%
+- tapOn: { id: script-back }
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-projects }
+- tapOn: New
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: { id: compact-editor }
+- tapOn: Add media
+- assertVisible: { id: media-sheet }
+- tapOn:
+    point: 50%, 5%
+- waitForAnimationToEnd
+- assertNotVisible: { id: media-sheet }
+- assertVisible: { id: compact-toolbar }
+- tapOn: Add media
+- tapOn: Device
+- tapOn: { id: media-pick-videos }
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: Cancel
+- assertNotVisible: Loading from Metro…

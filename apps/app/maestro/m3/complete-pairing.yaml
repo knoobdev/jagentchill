@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "348615"
+- tapOn:
+    text: Pair
+- waitForAnimationToEnd

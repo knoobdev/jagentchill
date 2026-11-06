@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+# Run from an open session. The project host must already have a session available.
+- assertVisible:
+    id: session-back
+- tapOn:
+    id: session-back
+- waitForAnimationToEnd
+- assertVisible:
+    id: home-quick-start-new
+- assertNotVisible:
+    id: drawer

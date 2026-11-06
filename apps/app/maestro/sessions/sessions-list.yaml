@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Open navigation
+- waitForAnimationToEnd
+- assertVisible: Sessions
+- tapOn:
+    text: Sessions
+- waitForAnimationToEnd
+- assertVisible: Search sessions and messages
+- assertVisible: Please ask me about the aspect ratio for this session.

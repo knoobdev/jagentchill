@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: "Back, Home"
+- waitForAnimationToEnd
+- assertVisible:
+    id: home-page
+- assertVisible: New project
+- assertNotVisible:
+    id: compact-editor

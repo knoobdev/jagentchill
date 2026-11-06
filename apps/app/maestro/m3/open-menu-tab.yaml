@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Menu
+- waitForAnimationToEnd
+- waitForAnimationToEnd

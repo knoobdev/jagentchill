@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 85%,65%
+    end: 75%,65%
+    duration: 1200
+- tapOn:
+    point: 50%,65%
+- assertVisible: Split

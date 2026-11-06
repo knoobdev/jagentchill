@@ -1,0 +1,26 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: home-quick-start-new
+- assertVisible:
+    id: home-quick-start-import
+- assertVisible:
+    id: home-quick-start-prompt
+- assertVisible:
+    id: home-composer-dock
+- assertVisible: Recent projects
+- assertVisible:
+    id: home-open-composer
+- takeScreenshot: .dev/shots/w9-m1/home-phone-first-screen.png
+- swipe:
+    start: 50%, 48%
+    end: 50%, 28%
+- assertVisible: Get started
+- assertVisible:
+    id: home-checklist-project
+- swipe:
+    start: 50%, 50%
+    end: 50%, 25%
+- assertVisible:
+    id: home-checklist-prompt
+- assertVisible: Show starter tips

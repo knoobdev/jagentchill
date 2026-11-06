@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible: Pairing link
+- tapOn: Continue
+- assertVisible: Verify pairing
+- assertVisible: "Host: JAgentChill"
+- assertVisible:
+    id: pairing-verification-code

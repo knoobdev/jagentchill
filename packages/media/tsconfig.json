@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strict": true, "noEmit": true, "allowImportingTsExtensions": true, "module": "esnext", "moduleResolution": "bundler", "erasableSyntaxOnly": true,
+    "target": "es2023", "lib": ["es2023", "dom", "dom.iterable", "webworker"], "skipLibCheck": true, "types": ["node"]
+  },
+  "include": ["src", "test"],
+  "exclude": ["test/browser/harness.ts"]
+}

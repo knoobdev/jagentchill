@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "JAgentChill",
+    "slug": "jagentchill",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-video",
+      "expo-sharing",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow JAgentChill to save exported videos to Photos.",
+          "savePhotosPermission": "Allow JAgentChill to save exported videos to Photos."
+        }
+      ],
+      "react-native-edge-to-edge",
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow JAgentChill to scan desktop pairing QR codes."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow JAgentChill to import photos and videos into your project."
+        }
+      ]
+    ],
+    "scheme": "jagentchill",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "9eac71da-62c1-460d-92bb-345f610fb7ad"
+      }
+    },
+    "owner": "jcode831"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@jagentchill/render",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The render engine: scene builder, resolve pass, frame descriptors, texture sync, decode, caches, audio and the export loop, over the wasm compositor.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./export-worker": "./src/surface/export-worker.ts"
+  },
+  "scripts": {
+    "check:boundaries": "node scripts/check-boundaries.ts",
+    "lint:ticks": "node scripts/lint-tick-division.ts",
+    "golden:update": "JC_GOLDEN_UPDATE=1 node --test test/golden/golden.test.ts",
+    "golden:coverage": "node scripts/golden-coverage.ts",
+    "bench:b1": "node test/bench/b1.bench.ts",
+    "test": "node --test --test-concurrency=1 \"test/*.test.ts\" \"test/browser/*.test.ts\" \"test/golden/*.test.ts\""
+  },
+  "dependencies": {
+    "@jagentchill/content": "workspace:*",
+    "@jagentchill/editor-core": "workspace:*",
+    "@jagentchill/protocol": "workspace:*",
+    "@jagentchill/render-wasm": "workspace:*",
+    "mediabunny": "1.61.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "esbuild": "^0.25.0",
+    "playwright": "*",
+    "typescript": "6.0.3"
+  }
+}

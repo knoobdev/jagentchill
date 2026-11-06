@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 93%, 50%
+- assertVisible:
+    id: host-export-stage

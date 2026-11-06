@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+# Run on a session fixture with an image attachment named seed-mobile-attachment.png.
+- assertVisible:
+    id: sent-attachments
+- tapOn:
+    id: sent-attachment-seed-mobile-attachment
+- assertVisible:
+    id: sent-attachment-preview

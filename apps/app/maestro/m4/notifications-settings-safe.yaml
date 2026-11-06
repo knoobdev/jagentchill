@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-notifications }
+- tapOn: { id: inbox-settings }
+- assertVisible: { id: notification-settings }
+- swipe:
+    start: 50%, 80%
+    end: 50%, 30%
+    duration: 500
+- assertVisible: Finished or failed

@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Which cut should I show?
+- tapOn: Wide
+- assertVisible:
+    id: question-submit
+- tapOn:
+    id: question-submit
+- waitForAnimationToEnd
+- assertNotVisible:
+    id: question-card

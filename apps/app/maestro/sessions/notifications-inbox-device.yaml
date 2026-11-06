@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- assertVisible:
+    id: footer-notifications
+- tapOn:
+    id: footer-notifications
+- waitForAnimationToEnd
+- assertVisible: Notifications
+- takeScreenshot: notifications-inbox-device.png

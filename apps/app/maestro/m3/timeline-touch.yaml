@@ -1,0 +1,29 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: compact-timeline
+- assertVisible:
+    id: playhead
+- swipe:
+    from:
+      id: compact-timeline
+      point: "75%,70%"
+    to:
+      id: compact-timeline
+      point: "25%,70%"
+    duration: 700
+- pinch:
+    id: compact-timeline
+    scale: 1.4
+- assertVisible:
+    id: compact-timeline
+- tapOn:
+    id: strip-video
+- longPressOn:
+    id: strip-video
+- assertVisible:
+    id: compact-timeline
+- assertVisible:
+    id: bar-undo
+- assertVisible:
+    id: bar-redo

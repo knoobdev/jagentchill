@@ -1,0 +1,17 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: chat-scroll
+- assertVisible:
+    id: question-card
+- assertVisible:
+    id: question-text
+- assertVisible:
+    id: question-option
+- assertVisible:
+    id: question-skip
+- assertVisible:
+    id: question-submit
+- assertVisible:
+    id: chat-composer-dock
+- takeScreenshot: timeline-cards-mobile.png

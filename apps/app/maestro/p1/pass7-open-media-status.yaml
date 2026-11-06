@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Add media
+- assertVisible:
+    id: media-sheet
+- assertVisible: Project

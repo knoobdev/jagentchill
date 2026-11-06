@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: host-row-e8068ddce0f12f00e7615a99a5cea922
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: home-quick-start-new

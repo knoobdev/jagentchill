@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: "18%,13%"
+- waitForAnimationToEnd

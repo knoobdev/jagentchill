@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+# Start with the named host selected in the Hosts sheet.
+- tapOn:
+    id: host-switcher
+- assertVisible: Hosts
+- tapOn:
+    text: Disconnect from JAgentChill
+- assertVisible: Disconnect from JAgentChill
+- assertVisible: Cancel
+- tapOn: Cancel
+- assertNotVisible: Disconnect from JAgentChill

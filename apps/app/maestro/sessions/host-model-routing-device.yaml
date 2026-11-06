@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn:
+    point: 51%, 93%
+- waitForAnimationToEnd
+- assertVisible: Settings
+- scroll
+- tapOn: Model routing (ORC)
+- waitForAnimationToEnd
+- assertVisible: Model routing (ORC)
+- assertVisible: ORC enabled
+- takeScreenshot: model-routing-device.png

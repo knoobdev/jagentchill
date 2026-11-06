@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Open navigation
+- tapOn:
+    text: Sessions
+- tapOn:
+    id: session-row
+- assertVisible:
+    id: agent-composer-surface
+- tapOn:
+    id: composer-attach
+- tapOn:
+    text: Choose files
+- assertVisible: File attachments are not available on this device yet.
+- takeScreenshot: chat-attachment-native.png

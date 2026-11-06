@@ -1,0 +1,23 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: home-recent-project-.*
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- tapOn:
+    id: open-export
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: export-dialog
+- swipe:
+    start: 50%, 70%
+    end: 50%, 35%
+    duration: 400
+- swipe:
+    start: 50%, 70%
+    end: 50%, 35%
+    duration: 400
+- assertVisible: Export on

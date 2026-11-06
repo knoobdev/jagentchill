@@ -1,0 +1,17 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.media
+- assertVisible:
+    id: media-sheet
+- takeScreenshot: root-media-picker
+- swipe:
+    start: 50%,11%
+    end: 50%,90%
+    duration: 400
+- assertNotVisible:
+    id: media-sheet

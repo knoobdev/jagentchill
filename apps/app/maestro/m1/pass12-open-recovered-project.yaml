@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: home-recent-project-.*
+- waitForAnimationToEnd
+- assertVisible: New project

@@ -1,0 +1,24 @@
+{
+  "name": "@jagentchill/storage",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Client persistence: the storage port, the per-platform stores, migrations, autosave, snapshots and packages.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./desktop": "./src/desktop.ts"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.ts\""
+  },
+  "dependencies": {
+    "@jagentchill/editor-core": "workspace:*",
+    "@jagentchill/protocol": "workspace:*",
+    "culori": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/culori": "^4.0.1",
+    "@types/node": "^26.6.4",
+    "fake-indexeddb": "^6.0.0"
+  }
+}

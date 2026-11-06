@@ -1,0 +1,11 @@
+{
+  "name": "@jagentchill/media",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Media library engine: import pipeline, probing, thumbnails, filmstrips, waveform summaries, proxies, relink and library logic.",
+  "exports": { ".": "./src/index.ts", "./browser": "./src/browser/index.ts", "./worker": "./src/browser/worker.ts" },
+  "scripts": { "test": "node --test \"test/*.test.ts\"" },
+  "dependencies": { "@jagentchill/editor-core": "workspace:*", "@jagentchill/protocol": "workspace:*", "mediabunny": "1.61.1" },
+  "devDependencies": { "@types/node": "^26.6.4" }
+}

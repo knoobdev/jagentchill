@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: "16:9"
+- tapOn: Submit
+- waitForAnimationToEnd
+- assertVisible: Thanks. I will continue with that choice.

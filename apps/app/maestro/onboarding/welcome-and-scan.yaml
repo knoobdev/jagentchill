@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- assertVisible: Connect your computer to get started
+- assertVisible: Scan QR code
+- assertVisible: Paste pairing link
+- tapOn: Scan QR code
+- assertVisible: Scan QR code
+- assertVisible: Paste pairing link
+- tapOn: Paste pairing link
+- assertVisible: Pairing link
+- assertVisible:
+    id: pairing-link-input

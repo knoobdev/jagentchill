@@ -1,0 +1,19 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: home-composer-dock
+- assertVisible:
+    id: home-quick-start-new
+- assertVisible:
+    id: home-quick-start-import
+- assertVisible:
+    id: home-quick-start-prompt
+- assertVisible: Recent projects
+- swipe:
+    start: "50%, 48%"
+    end: "50%, 28%"
+- assertVisible: Get started
+- assertVisible:
+    id: home-checklist-project
+- assertVisible:
+    id: home-composer-dock

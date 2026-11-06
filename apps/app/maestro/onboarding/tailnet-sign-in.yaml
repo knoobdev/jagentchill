@@ -1,0 +1,20 @@
+appId: dev.jagentchill.devclient
+---
+# Precondition: a fresh tailnet offer link is in the clipboard; the phone is signed out.
+- launchApp
+- assertVisible: Connect your computer to get started
+- tapOn: Paste pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- tapOn: Continue
+- assertVisible: Join your tailnet
+- assertVisible: Your phone reaches your computer over Tailscale. Sign in with the same Tailscale account as the computer.
+- tapOn: Sign in with Tailscale
+- assertVisible: Finish signing in in the browser…
+- assertVisible:
+    id: tailscale-open-login
+- assertVisible:
+    id: tailscale-cancel-waiting

@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Menu
+- waitForAnimationToEnd
+- tapOn:
+    id: nav-projects
+- waitForAnimationToEnd
+- assertVisible: Projects
+- assertVisible:
+    id: projects-sort-filter
+- assertNotVisible:
+    id: drawer

@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: composer-input
+- inputText: '#script {"steps":[{"say":"The delayed local stub reply arrived.","chunks":10,"chunk_ms":250,"hold_ms":5000}]}'
+- tapOn:
+    id: composer-send
+- assertVisible:
+    id: status-line
+- takeScreenshot: session-status-line.png
+- extendedWaitUntil:
+    visible: The delayed local stub reply arrived.
+    timeout: 15000

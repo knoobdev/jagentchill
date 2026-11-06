@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Settings
+- tapOn: Model routing (ORC)
+- assertVisible: Model routing (ORC)
+- assertVisible: Search roles
+- scroll
+- assertVisible: Supervisor

@@ -1,0 +1,63 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>render-wasm frame test</title>
+<script type="module">
+import init, * as wasm from "/pkg/opencut_wasm.js";
+
+function solid(width, height, color) {
+  const canvas = new OffscreenCanvas(width, height);
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, width, height);
+  return canvas;
+}
+
+async function run() {
+  await init();
+  const forceBackend = new URLSearchParams(location.search).get("backend") ?? undefined;
+  const first = await wasm.initializeGpu({ forceBackend });
+  const second = await wasm.initializeGpu({ forceBackend });
+  const width = 320, height = 180;
+  wasm.initCompositor({ width, height });
+  wasm.uploadTexture({ id: "red", source: solid(64, 64, "#ff0000"), width: 64, height: 64 });
+  wasm.uploadTexture({ id: "blue", source: await createImageBitmap(solid(64, 64, "#0000ff")), width: 64, height: 64 });
+  wasm.uploadTexturePixels({ id: "green", data: new Uint8Array(4 * 4 * 4).map((_, index) => [0, 255, 0, 255][index % 4]), width: 4, height: 4 });
+  const layer = (textureId, centerX, centerY, w, h, opacity) => ({
+    type: "layer", textureId, opacity, blendMode: "normal", effectPassGroups: [], masks: [],
+    crop: { left: 0, top: 0, right: 0, bottom: 0 },
+    transform: { centerX, centerY, width: w, height: h, rotationDegrees: 0, flipX: false, flipY: false },
+  });
+  const descriptor = {
+    version: 3, width, height, clear: { color: [0, 0, 0, 1] },
+    // Red fills the left half; blue is a 100×100 square centred on the canvas, drawn above red, half transparent;
+    // green is a small opaque square in the top-right corner.
+    items: [layer("red", 80, 90, 160, 180, 1), layer("blue", 160, 90, 100, 100, 0.5), layer("green", 300, 20, 20, 20, 1)],
+  };
+  const report = wasm.renderFrame({ descriptor });
+  const output = wasm.getCompositorCanvas();
+  document.body.appendChild(output);
+  // A descriptor that is refused presents nothing: the canvas, copied in the same task, still shows the frame above.
+  let invalid = null;
+  try { wasm.renderFrame({ descriptor: { ...descriptor, items: [{ ...layer("red", 80, 90, 160, 180, 1), opacity: NaN }] } }); } catch (error) { invalid = String(error); }
+  const probe = document.createElement("canvas");
+  probe.width = width; probe.height = height;
+  const ctx = probe.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage(output, 0, 0);
+  const afterInvalid = Array.from(ctx.getImageData(20, 90, 1, 1).data);
+  const pixels = await wasm.readPixels({ x: 0, y: 0, width, height });
+  const at = (x, y) => Array.from(pixels.slice((y * width + x) * 4, (y * width + x) * 4 + 4));
+  return {
+    backends: [first, second], info: wasm.getBackendInfo(), stats: wasm.getTextureStats(), shaders: wasm.listShaders(), blendModes: wasm.listBlendModes(),
+    report, profile: wasm.getLastFrameProfile(), ticksPerSecond: Number(wasm.TICKS_PER_SECOND()),
+    size: [output.width, output.height],
+    redOnly: at(20, 90),          // inside red, outside blue
+    blueOverRed: at(130, 90),     // blue at 50 % over red
+    blueOverBlack: at(190, 90),   // blue at 50 % over the black clear colour
+    background: at(300, 100),     // no layer
+    green: at(300, 20),
+    presented: Array.from(ctx.getImageData(130, 90, 1, 1).data),
+    invalid, afterInvalid,
+  };
+}
+window.result = run().then((value) => ({ ok: true, value }), (error) => ({ ok: false, error: String(error && error.stack || error) }));
+</script>

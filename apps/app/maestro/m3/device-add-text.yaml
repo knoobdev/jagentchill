@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Text
+- assertVisible: Add text
+- tapOn: Add text
+- assertVisible:
+    id: compact-editor
+- assertVisible:
+    id: host-preview-label

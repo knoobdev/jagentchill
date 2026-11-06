@@ -1,0 +1,55 @@
+schema: spec-driven
+
+context: |
+  Product: JAgentChill — trình biên tập video đa nền tảng (desktop / mobile / web) hoạt động GIỐNG CAPCUT,
+  có chat agent, workflow tạo video từ một prompt (kèm diagram), và studio sản xuất phim bằng AI.
+
+  Benchmarks (thứ tự ưu tiên khi có mâu thuẫn):
+    1. CapCut = chuẩn CHỨC NĂNG và CÁCH THAO TÁC của editor. Danh mục: docs/research/capcut-parity-benchmark.md
+       (CC-001..CC-291) và docs/research/capcut-mobile-ui-reference.md.
+    2. OpenCut classic (MIT) = MÃ NGUỒN KHỞI ĐIỂM được port toàn bộ. Kiểm kê: docs/research/opencut-classic-inventory.md.
+       Repo opencut-app/opencut hiện tại chỉ là skeleton không có editor (docs/research/opencut-inventory.md).
+    3. Devin = NGÔN NGỮ THỊ GIÁC (shell, sidebar, composer, card, modal, token). docs/research/devin-ui-reference.md.
+       Không dùng tên, logo hay asset thương hiệu của Devin/CapCut.
+    4. JAgentDesk = mẫu cho kết nối đa thiết bị có ký, chat agent, ORC. docs/research/jagentdesk-reference.md.
+    5. waoowaoo = tham chiếu HÀNH VI cho sản xuất phim (v0.4.1: không có license; HEAD: Elastic License 2.0).
+       CẤM chép code hoặc nội dung prompt của waoowaoo. docs/research/waoowaoo-*.md.
+    6. archify (MIT) = được FORK (packages/archify) và mở rộng thành canvas workflow. docs/research/archify-reference.md.
+
+  Kiến trúc: JAgentChill là sản phẩm riêng với SERVER RIÊNG (server/). OpenClaw (MIT, ghim theo tag trong
+  gateway/OPENCLAW_VERSION, mã nguồn nguyên bản trong gateway/openclaw/) chỉ là bộ máy agent, chạy như TIẾN TRÌNH CON
+  do JAgentChill Server giám sát và chỉ nghe loopback. JAgentChill KHÔNG phải plugin/extension của OpenClaw: không có
+  file nào của JAgentChill trong gateway/openclaw/ và không file nào ở đó bị sửa. Server nối Gateway bằng
+  @openclaw/gateway-client; tool cho agent được cấp qua MCP từ server. docs/decisions/0002-own-server-gateway-sidecar.md.
+  Toàn bộ code JAgentChill nằm trong server/, packages/*, apps/*, skills/.
+
+  Tech stack: TypeScript ESM, Node >= 24.17, pnpm 12. Host = JAgentChill Server + OpenClaw Gateway (tiến trình con).
+  App = Expo / React Native + react-native-web (một codebase cho mobile + web), desktop = Electron bọc bản web export
+  và khởi chạy JAgentChill Server. Engine dựng hình = Rust/wasm (wgpu) + WebCodecs + TypeScript, dùng chung cho
+  web/desktop, chạy trong WebView engine-surface trên mobile. Schema dùng chung = Zod trong packages/protocol.
+
+  Conventions: mọi timestamp là Unix UTC milliseconds với hậu tố _ms; thời gian media là integer ticks
+  (120000 ticks/giây). RPC mới đặt tên dạng chấm, hướng ở cuối: jagentchill.<domain>.<verb>.request/.response.
+  Field wire mới luôn optional; không xoá hay thu hẹp field. Giá trị thiết kế (màu, px, ms) phải ghi số thật.
+  UI string mặc định tiếng Anh, nằm trong locale resource (en, vi, ja bắt buộc). Proposal/design viết tiếng Việt;
+  spec viết tiếng Anh chuẩn SHALL/WHEN/THEN.
+
+  Cấm: mock data hoặc placeholder trong sản phẩm, tuyên bố xong khi chưa có bằng chứng, đoán hành vi tham chiếu
+  thay vì đọc file nghiên cứu, chia phase / MVP / "làm sau", thêm telemetry gửi ra ngoài, sửa file của OpenClaw,
+  viết JAgentChill thành plugin/extension của OpenClaw.
+
+rules:
+  proposal:
+    - Luôn có mục "Non-goals".
+    - Không chia phase; mọi capability đều thuộc một bản production duy nhất.
+  design:
+    - Mỗi quyết định nêu phương án đã cân nhắc và lý do.
+    - Mọi khẳng định về hành vi tham chiếu phải trỏ tới file trong docs/research hoặc đường dẫn nguồn.
+  specs:
+    - Requirement phải kiểm thử được; mỗi requirement có ít nhất một scenario (#### Scenario, WHEN/THEN).
+    - Ghi nguồn gốc mỗi requirement bằng tag ở cuối mô tả - [PORT] (từ OpenCut classic), [CAPCUT CC-xxx] (chuẩn CapCut),
+      [JAD] (theo JAgentDesk), [NEW] (riêng JAgentChill).
+    - Nêu rõ khác biệt theo nền tảng (desktop / web / mobile) khi có.
+    - Không viết "phase", "later", "optional future", "MVP".
+  tasks:
+    - Nhóm theo capability; mỗi task trỏ tới requirement nó thoả mãn và có tiêu chí kiểm chứng.

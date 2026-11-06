@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/time",
+    "crates/audio",
+    "crates/bridge",
+    "crates/effects",
+    "crates/gpu",
+    "crates/masks",
+    "crates/color",
+    "crates/text",
+    "crates/compositor",
+    "wasm",
+]
+
+[profile.release]
+opt-level = "s"
+lto = true

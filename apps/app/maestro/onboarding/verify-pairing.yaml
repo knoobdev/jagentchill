@@ -1,0 +1,18 @@
+appId: dev.jagentchill.devclient
+---
+# Precondition: a fresh host pairing offer is in the clipboard and the phone is signed into the same tailnet.
+- launchApp
+- assertVisible: Connect your computer to get started
+- tapOn: Paste pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- tapOn: Continue
+- assertVisible: Verify pairing
+- assertVisible: Host: JAgentChill
+- assertVisible:
+    id: pairing-verification-code
+- inputText: ${PAIR_CODE}
+- assertVisible: JAgentChill

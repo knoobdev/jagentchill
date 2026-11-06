@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- assertVisible: Settings
+- tapOn: Settings
+- assertVisible: Settings
+- scroll
+- tapOn: Usage and limits
+- assertVisible: Usage
+- assertVisible: Limits
+- assertVisible: Estimated spend
+- assertVisible: Tokens per day
+- tapOn: Limits
+- assertVisible: Token saving

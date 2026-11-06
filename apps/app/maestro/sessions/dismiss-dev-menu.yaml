@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: "355,96"
+- waitForAnimationToEnd
+- takeScreenshot: dismissed-dev-menu.png

@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 55%, 65%
+    end: 90%, 65%
+    duration: 900
+- tapOn:
+    id: player-play
+- assertVisible: Pause

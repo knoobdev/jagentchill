@@ -1,0 +1,17 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 90%, 40%
+- waitForAnimationToEnd
+- tapOn:
+    point: 51%, 93%
+- waitForAnimationToEnd
+- assertVisible: Settings
+- scroll
+- assertVisible: Storage on host
+- tapOn: Storage on host
+- waitForAnimationToEnd
+- assertVisible: Storage on host
+- assertVisible: Projects
+- assertVisible: Sync activity
+- takeScreenshot: host-storage-device.png

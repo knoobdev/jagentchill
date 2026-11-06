@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- tapOn: New
+- assertVisible: New project
+- tapOn: Connect
+- assertVisible: Connect to JAgentChill
+- tapOn: Paste pairing link
+- assertVisible: { id: pairing-link-paste }
+- tapOn: { id: pairing-link-paste }
+- tapOn: { text: Allow Paste, optional: true }
+- tapOn: Continue
+- assertVisible: Verification code
+- assertVisible: { id: pairing-verification-code }

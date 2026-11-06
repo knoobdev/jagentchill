@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: session-menu
+- tapOn: Search conversation
+- assertVisible:
+    id: chat-search-input
+- inputText: aspect ratio
+- assertVisible:
+    id: chat-search-result-1
+- tapOn:
+    id: chat-search-result-1
+- assertVisible:
+    id: tool-jc_session_ask

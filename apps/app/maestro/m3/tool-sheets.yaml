@@ -1,0 +1,31 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: compact-preview
+- assertVisible:
+    id: compact-timeline
+- tapOn:
+    id: tool-root.more
+- assertVisible:
+    id: more-sheet
+- pressKey: Back
+- assertNotVisible:
+    id: tool-sheet
+- tapOn:
+    id: tool-root.audio
+- tapOn:
+    id: tool-audio.sounds
+- assertVisible:
+    id: tool-sheet-handle
+- assertVisible:
+    id: tool-sheet-close
+- swipe:
+    from:
+      id: tool-sheet-handle-zone
+      point: "50%,20%"
+    to:
+      id: tool-sheet-handle-zone
+      point: "50%,90%"
+    duration: 400
+- assertNotVisible:
+    id: tool-sheet

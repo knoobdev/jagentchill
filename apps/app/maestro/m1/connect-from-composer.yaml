@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Connect
+- waitForAnimationToEnd
+- assertVisible: Connect to JAgentChill
+- assertVisible: Paste pairing link

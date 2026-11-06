@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+# Run on a session fixture with a pending jc_* permission request.
+- assertVisible:
+    id: permission-card
+- assertVisible:
+    id: permission-allow-once
+- assertVisible:
+    id: permission-deny

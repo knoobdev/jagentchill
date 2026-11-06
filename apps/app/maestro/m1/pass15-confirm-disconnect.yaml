@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Disconnect
+- waitForAnimationToEnd
+- assertVisible: Hosts
+- assertVisible: This device only

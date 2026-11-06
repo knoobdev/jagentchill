@@ -1,0 +1,19 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- tapOn:
+    id: nav-sessions
+- waitForAnimationToEnd
+- assertVisible: Search sessions and messages
+- assertVisible: 3 Sessions
+- assertVisible:
+    id: sessions-list
+- assertVisible:
+    id: sessions-filters-open
+- tapOn:
+    id: sessions-filters-open
+- assertVisible:
+    id: sessions-filters-sheet
+- assertVisible: Filter sessions
+- assertVisible: Sort sessions
+- assertVisible: Runtime

@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-close
+- assertNotVisible:
+    id: export-dialog
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: projects-sort-filter

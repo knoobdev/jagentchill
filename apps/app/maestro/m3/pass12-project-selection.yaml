@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Projects
+- assertVisible:
+    text: "13 Oct"
+- assertNotVisible:
+    id: project-selection-check-.*
+- longPressOn:
+    point: 20%,30%
+- waitForAnimationToEnd
+- assertVisible:
+    id: project-selection-check-.*

@@ -1,0 +1,34 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: tool-audio.sounds
+- waitForAnimationToEnd
+- assertVisible:
+    id: tool-sheet-title
+- assertVisible:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-sheet-close
+- waitForAnimationToEnd
+- assertVisible:
+    id: compact-toolbar
+- tapOn: Add media
+- waitForAnimationToEnd
+- assertVisible:
+    id: media-sheet
+- assertVisible: Device
+- assertVisible: Project
+- assertVisible: Library
+- tapOn: Device
+- assertVisible: Videos
+- assertVisible: Photos
+- assertVisible: Browse files
+- swipe:
+    start: 50%, 12%
+    end: 50%, 55%
+    duration: 600
+- waitForAnimationToEnd
+- assertNotVisible:
+    id: media-sheet
+- assertVisible:
+    id: compact-toolbar

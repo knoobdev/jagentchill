@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- setOrientation: LANDSCAPE_LEFT
+- assertVisible:
+    id: compact-preview
+- assertVisible:
+    id: compact-timeline
+- takeScreenshot: landscape
+- setOrientation: PORTRAIT
+- assertVisible:
+    id: compact-preview
+- assertVisible:
+    id: compact-timeline
+- takeScreenshot: portrait

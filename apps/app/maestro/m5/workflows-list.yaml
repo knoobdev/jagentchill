@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-workflows }
+- assertVisible: { id: workflow-new }
+- assertVisible: "Search workflows"

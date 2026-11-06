@@ -1,0 +1,25 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Projects
+- waitForAnimationToEnd
+- assertVisible: New project
+- tapOn:
+    id: project-New project
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- tapOn:
+    id: open-export
+- assertVisible:
+    id: export-dialog
+- assertVisible:
+    id: export-start
+- tapOn:
+    id: export-start
+- assertVisible:
+    id: host-export-job
+- assertVisible:
+    id: host-export-stage
+- assertVisible:
+    id: host-export-cancel

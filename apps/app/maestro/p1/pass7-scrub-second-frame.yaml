@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 60%, 64%
+    end: 75%, 64%
+- assertVisible: "00:05"

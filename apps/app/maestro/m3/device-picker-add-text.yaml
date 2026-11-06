@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Add
+- waitForAnimationToEnd:
+    timeout: 20000

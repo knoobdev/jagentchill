@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: "sessions-row-.*"
+- waitForAnimationToEnd
+- assertVisible:
+    id: question-card
+- assertVisible: Which cut should I show?
+- assertVisible:
+    id: chat-composer-dock

@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- assertVisible: Settings
+- tapOn: Settings
+- assertVisible: Settings
+- scroll
+- tapOn: Skills
+- assertVisible: Installed
+- assertVisible: Search skills
+- assertVisible: All scopes

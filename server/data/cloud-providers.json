@@ -1,0 +1,7 @@
+{
+  "amazon-bedrock": {"label": "Amazon Bedrock", "credentialSource": "The AWS credentials configured on the host", "requiredSettings": [{"key": "region", "label": "Region", "example": "us-east-1"}], "docsUrl": "https://docs.aws.amazon.com/bedrock/"},
+  "amazon-bedrock-mantle": {"label": "Amazon Bedrock (Mantle)", "credentialSource": "The AWS credentials configured on the host", "requiredSettings": [{"key": "region", "label": "Region", "example": "us-east-1"}], "docsUrl": "https://docs.aws.amazon.com/bedrock/"},
+  "google-vertex": {"label": "Google Vertex AI", "credentialSource": "The Google Cloud credentials configured on the host", "requiredSettings": [{"key": "project", "label": "Project", "example": "my-project"}, {"key": "location", "label": "Location", "example": "us-central1"}], "docsUrl": "https://cloud.google.com/vertex-ai/docs"},
+  "anthropic-vertex": {"label": "Anthropic on Vertex AI", "credentialSource": "The Google Cloud credentials configured on the host", "requiredSettings": [{"key": "project", "label": "Project", "example": "my-project"}, {"key": "location", "label": "Location", "example": "us-east5"}], "docsUrl": "https://docs.anthropic.com/en/api/claude-on-vertex-ai"},
+  "azure-openai-responses": {"label": "Azure OpenAI", "credentialSource": "The Azure credentials configured on the host", "requiredSettings": [{"key": "resourceName", "label": "Resource name", "example": "my-resource"}], "docsUrl": "https://learn.microsoft.com/azure/ai-services/openai/"}
+}

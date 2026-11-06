@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-dismiss
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd
+- tapOn: Home
+- waitForAnimationToEnd
+- assertVisible:
+    id: home-quick-start-new
+- tapOn:
+    point: 42%, 10%
+- assertVisible: Hosts
+- assertVisible:
+    id: host-switcher-list

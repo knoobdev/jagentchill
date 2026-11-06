@@ -1,0 +1,21 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Projects
+- waitForAnimationToEnd
+- assertVisible: New project
+- tapOn:
+    id: project-New project
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- assertVisible:
+    id: player-stage
+- assertVisible:
+    id: host-preview-label
+- tapOn:
+    id: player-play
+- assertVisible:
+    id: host-preview-progress
+- assertVisible:
+    id: player-stage

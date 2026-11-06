@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 24%,48%
+- waitForAnimationToEnd
+- assertVisible:
+    id: compact-time
+- assertVisible:
+    id: compact-timeline

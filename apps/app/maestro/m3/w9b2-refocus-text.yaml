@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: text-content
+- assertVisible: Mobile exact words
+- waitForAnimationToEnd

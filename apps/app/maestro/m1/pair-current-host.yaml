@@ -1,0 +1,17 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Paste pairing link
+- assertVisible:
+    id: pairing-link-input
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible:
+    id: pairing-link-input
+- tapOn: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code
+- assertVisible:
+    id: pairing-verification-code

@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-dismiss
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd
+- assertVisible:
+    id: home-page

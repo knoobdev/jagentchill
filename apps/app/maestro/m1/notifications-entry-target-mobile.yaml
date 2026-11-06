@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+# Run with an existing unread notification whose route is a valid app destination.
+- tapOn: Open navigation
+- tapOn:
+    id: footer-notifications
+- assertNotVisible:
+    id: drawer
+- assertVisible:
+    id: inbox
+- tapOn:
+    id: inbox-entry-link
+- assertNotVisible:
+    id: drawer

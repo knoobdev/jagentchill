@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-close
+- waitForAnimationToEnd
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd
+- assertVisible: New project

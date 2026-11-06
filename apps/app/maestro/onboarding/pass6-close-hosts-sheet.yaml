@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 50%, 30%
+- waitForAnimationToEnd:
+    timeout: 10000
+- assertVisible: Connect your computer to get started
+- assertVisible: Scan QR code
+- assertVisible: Paste pairing link

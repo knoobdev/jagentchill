@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Disconnect
+- waitForAnimationToEnd
+- tapOn: Connect a host
+- waitForAnimationToEnd
+- assertVisible: Pairing link
+- tapOn:
+    id: pairing-link-paste
+- assertVisible: Continue
+- tapOn: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code
+- takeScreenshot: pairing-link-start.png

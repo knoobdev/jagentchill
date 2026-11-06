@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 10%, 12%
+    end: 92%, 12%
+    duration: 900
+- waitForAnimationToEnd
+- tapOn:
+    point: 7%, 10%
+- waitForAnimationToEnd
+- assertVisible:
+    id: drawer

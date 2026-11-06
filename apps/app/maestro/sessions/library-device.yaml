@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn: Menu
+- waitForAnimationToEnd
+- tapOn: Library
+- waitForAnimationToEnd
+- assertVisible: Library
+- assertVisible: Templates
+- assertVisible: Preset packs
+- assertVisible: Fonts
+- takeScreenshot: library-device.png

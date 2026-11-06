@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-start
+- assertVisible:
+    id: host-export-stage

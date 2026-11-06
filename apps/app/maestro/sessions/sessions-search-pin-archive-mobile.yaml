@@ -1,0 +1,25 @@
+appId: dev.jagentchill.devclient
+---
+# Requires the existing three-session local stub fixture described in progress-w9-mobile-M2.md.
+- tapOn:
+    id: nav-sessions
+- assertVisible:
+    id: sessions-index
+- assertVisible: Search sessions and messages
+- assertVisible:
+    id: sessions-list
+- tapOn: Aspect ratio question actions
+- tapOn:
+    id: menu-pin-session
+- assertVisible: Pinned
+- tapOn: Search sessions and messages
+- inputText: Aspect ratio question
+- assertVisible: Aspect ratio question
+- tapOn: Search sessions and messages
+- eraseText: 40
+- tapOn: Vertical teaser plan actions
+- tapOn:
+    id: menu-archive-session
+- assertVisible: 2 Sessions
+- assertVisible:
+    id: sessions-list

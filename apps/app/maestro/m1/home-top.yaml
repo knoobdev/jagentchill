@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 50%, 30%
+    end: 50%, 60%
+- assertVisible:
+    id: home-quick-start-new
+- assertVisible:
+    id: home-quick-start-import
+- assertVisible:
+    id: home-quick-start-prompt
+- assertVisible:
+    id: composer-send
+- hideKeyboard

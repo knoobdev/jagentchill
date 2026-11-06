@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Hosts
+- assertVisible: JAgentChill
+- assertVisible: Pair a device
+- assertVisible: Add a host…
+- takeScreenshot: hosts-sheet-device.png

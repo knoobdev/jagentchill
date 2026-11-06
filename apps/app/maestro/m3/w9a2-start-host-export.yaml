@@ -1,0 +1,27 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-dismiss
+- waitForAnimationToEnd:
+    timeout: 1000
+- tapOn:
+    id: open-export
+- waitForAnimationToEnd:
+    timeout: 1000
+- tapOn:
+    id: export-start
+- waitForAnimationToEnd:
+    timeout: 1000
+- takeScreenshot: .dev/shots/w9a2-sim-export/21-host-export-start.png
+- waitForAnimationToEnd:
+    timeout: 1000
+- takeScreenshot: .dev/shots/w9a2-sim-export/22-host-export-progress.png
+- waitForAnimationToEnd:
+    timeout: 1000
+- takeScreenshot: .dev/shots/w9a2-sim-export/23-host-export-progress.png
+- waitForAnimationToEnd:
+    timeout: 1000
+- takeScreenshot: .dev/shots/w9a2-sim-export/24-host-export-progress.png
+- waitForAnimationToEnd:
+    timeout: 1000
+- takeScreenshot: .dev/shots/w9a2-sim-export/25-host-export-progress.png

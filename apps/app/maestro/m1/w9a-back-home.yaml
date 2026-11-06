@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Home
+- waitForAnimationToEnd
+- assertVisible:
+    id: home-quick-start-new

@@ -1,0 +1,19 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- tapOn:
+    id: footer-notifications
+- assertNotVisible:
+    id: drawer
+- assertVisible:
+    id: inbox
+- assertVisible:
+    id: inbox-settings
+- tapOn:
+    id: inbox-read-all
+    optional: true
+- tapOn:
+    id: inbox-clear
+    optional: true
+- assertVisible:
+    id: inbox-empty

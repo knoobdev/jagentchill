@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-notifications }
+- assertVisible: "The agent asks: Which aspect ratio should I use?"

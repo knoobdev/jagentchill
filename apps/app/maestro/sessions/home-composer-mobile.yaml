@@ -1,0 +1,77 @@
+appId: dev.jagentchill.devclient
+---
+# Run with a connected host and a routed runtime that reports context. Open the Home Ask bar first.
+- tapOn:
+    id: home-open-composer
+- assertVisible:
+    id: modal
+- assertVisible:
+    id: composer-input
+- assertVisible:
+    id: composer-attach
+- assertVisible:
+    id: composer-pill-model
+- assertVisible:
+    id: composer-overflow
+- assertVisible:
+    id: context-meter
+- tapOn:
+    id: composer-attach
+- assertVisible:
+    id: bottom-sheet
+- assertVisible: Choose files
+- pressKey: ESC
+- tapOn:
+    id: composer-pill-model
+- assertVisible:
+    id: bottom-sheet
+- assertVisible:
+    id: model-browser
+- pressKey: ESC
+- tapOn:
+    id: composer-overflow
+- assertVisible:
+    id: menu-thinking
+- tapOn:
+    id: menu-thinking
+- assertVisible:
+    id: bottom-sheet
+- assertVisible: Thinking
+- pressKey: ESC
+- tapOn:
+    id: composer-overflow
+- assertVisible:
+    id: menu-skills
+- tapOn:
+    id: menu-skills
+- assertVisible:
+    id: skill-picker
+- assertVisible:
+    id: bottom-sheet
+- pressKey: ESC
+- tapOn:
+    id: composer-overflow
+- assertVisible:
+    id: menu-permission
+- tapOn:
+    id: menu-permission
+- assertVisible:
+    id: bottom-sheet
+- assertVisible: Auto
+- pressKey: ESC
+- tapOn:
+    id: composer-input
+- inputText: "/"
+- assertVisible:
+    id: bottom-sheet
+- assertVisible:
+    id: slash-command-menu
+- assertVisible: Commands
+- pressKey: ESC
+- tapOn:
+    id: context-meter
+- assertVisible:
+    id: bottom-sheet
+- assertVisible:
+    id: context-popover
+- takeScreenshot: home-composer-context-mobile.png

@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- assertVisible: { id: connection-chip }
+- tapOn: { id: connection-chip }
+- assertVisible: Hosts
+- tapOn: "Add a host…"
+- assertVisible: "Add connection"
+- tapOn: "Paste pairing link"
+- assertVisible: { id: pairing-link-paste }
+- tapOn: { id: pairing-link-paste }
+- tapOn: { text: Allow Paste, optional: true }
+- tapOn: Continue
+- assertVisible: "Verification code"
+- assertVisible: { id: pairing-verification-code }

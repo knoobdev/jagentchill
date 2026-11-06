@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: { id: film-stage-story }
+- assertVisible: { id: film-tab-assets }
+- assertVisible: { id: film-tab-storyboard }
+- assertVisible: "Back, Film Studio"
+- tapOn: "Back, Film Studio"
+- assertVisible: { id: film-new }
+- assertVisible: "Search films"

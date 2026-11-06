@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: bar-redo
+- assertVisible:
+    text: 00:06 / 00:06
+- assertVisible:
+    id: host-preview-label

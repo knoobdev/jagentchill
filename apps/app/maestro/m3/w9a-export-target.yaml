@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 50%, 70%
+    end: 50%, 35%
+    duration: 400
+- swipe:
+    start: 50%, 70%
+    end: 50%, 35%
+    duration: 400
+- assertVisible: Export on

@@ -1,0 +1,25 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Projects
+- waitForAnimationToEnd
+- assertVisible: New project
+- tapOn:
+    id: project-New project
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- assertVisible: Add media
+- tapOn: Add media
+- waitForAnimationToEnd
+- assertVisible:
+    id: media-sheet
+- tapOn: Device
+- assertVisible:
+    id: media-pick-photos
+- tapOn:
+    id: media-pick-photos
+- waitForAnimationToEnd:
+    timeout: 90000
+- assertVisible:
+    id: media-items

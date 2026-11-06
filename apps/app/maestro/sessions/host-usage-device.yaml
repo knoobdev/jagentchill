@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn:
+    point: 51%, 93%
+- waitForAnimationToEnd
+- assertVisible: Settings
+- scroll
+- tapOn: Usage and limits
+- waitForAnimationToEnd
+- assertVisible: Usage and limits
+- assertVisible: Estimated spend

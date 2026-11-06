@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-workflows }
+- tapOn: Runs
+- tapOn: { text: ".*#\\d+.*" }
+- assertVisible: { id: run-canvas }
+- assertVisible: { id: run-fit }

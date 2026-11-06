@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Menu
+- tapOn:
+    id: nav-home
+- waitForAnimationToEnd
+- assertNotVisible:
+    id: drawer
+- assertVisible: New project
+- assertVisible: Ask

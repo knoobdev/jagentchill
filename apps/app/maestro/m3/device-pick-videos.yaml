@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Videos
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: Recents

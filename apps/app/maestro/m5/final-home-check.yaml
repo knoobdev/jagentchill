@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- assertVisible: { id: home-quick-start-new }
+- assertVisible: New project
+- assertNotVisible: { id: composer-input }
+- assertNotVisible: { id: script-editor }
+- assertNotVisible: { id: wf-canvas }

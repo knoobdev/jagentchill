@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: This device only
+- assertVisible:
+    id: home-page
+- assertNotVisible: Hosts

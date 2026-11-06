@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-settings }
+- tapOn: Sync
+- assertVisible: Sync new projects
+- assertVisible: Upload limit
+- assertVisible: Download limit
+- assertVisible: Sync my library

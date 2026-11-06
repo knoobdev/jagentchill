@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd:
+    timeout: 10000

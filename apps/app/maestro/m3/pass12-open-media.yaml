@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Add media
+- assertVisible:
+    id: media-sheet
+- tapOn: Device
+- waitForAnimationToEnd
+- assertVisible: Videos
+- tapOn: Videos
+- waitForAnimationToEnd:
+    timeout: 10000
+- assertVisible: Albums

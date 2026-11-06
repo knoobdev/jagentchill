@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Take over
+- waitForAnimationToEnd:
+    timeout: 10000
+- assertNotVisible: Read-only

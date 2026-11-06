@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 42%, 10%
+- assertVisible: Hosts
+- tapOn: Add a host…
+- assertVisible: Add connection
+- assertVisible:
+    id: add-connection-method-scan
+- assertVisible:
+    id: add-connection-method-paste
+- tapOn:
+    id: add-connection-method-paste
+- assertVisible: Pairing link
+- assertVisible:
+    id: pairing-link-input

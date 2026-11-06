@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 90%, 81%
+- assertVisible: Disconnect from JAgentChill
+- assertVisible: Cancel
+- tapOn: Disconnect
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: This device only

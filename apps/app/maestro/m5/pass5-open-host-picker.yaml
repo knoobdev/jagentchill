@@ -1,0 +1,15 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Close
+- tapOn: Open navigation
+- tapOn: JAgentChill
+- assertVisible: Hosts
+- assertVisible: { id: host-switcher-list }
+- tapOn: "Add a host…"
+- assertVisible: "Add connection"
+- tapOn: "Paste pairing link"
+- tapOn: { id: pairing-link-paste }
+- tapOn: { text: Allow Paste, optional: true }
+- assertVisible: { id: pairing-link-input }
+- tapOn: Continue
+- assertVisible: Verification code

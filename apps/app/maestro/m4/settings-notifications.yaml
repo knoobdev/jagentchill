@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-settings }
+- tapOn: Notifications
+- assertVisible: Show notifications outside the app
+- assertVisible: Permission of this device
+- assertVisible: Send a test notification

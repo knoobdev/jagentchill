@@ -1,0 +1,15 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Connect your computer to get started
+- tapOn: Paste pairing link
+- assertVisible: Pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible:
+    id: pairing-link-input
+- assertVisible: Name of this device
+- tapOn: Continue
+- assertVisible: Verification code

@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-settings }
+- tapOn: Updates
+- assertVisible: Version

@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 7%,10%
+- waitForAnimationToEnd
+- assertVisible: JAgentChill

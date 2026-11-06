@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: Settings
+- scroll
+- tapOn: Providers
+- assertVisible: Providers
+- assertVisible: Add provider
+- tapOn: Add provider
+- assertVisible: Sign-in & keys
+- assertVisible: Search providers

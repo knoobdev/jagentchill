@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: chat-composer-dock
+- tapOn:
+    id: composer-input
+- waitForAnimationToEnd
+- assertVisible:
+    id: chat-composer-dock
+- assertVisible:
+    id: composer-send
+- takeScreenshot: composer-keyboard-mobile.png

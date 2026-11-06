@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: mobile-global-search
+- assertVisible:
+    id: command-palette
+- assertVisible: Search projects and commands

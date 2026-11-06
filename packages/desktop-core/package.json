@@ -1,0 +1,22 @@
+{
+  "name": "@jagentchill/desktop-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure logic of the desktop shell: signing policy, host supervision, ports, links, menus, window state and per-platform registration. No Electron import.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./renderer": "./src/renderer.ts"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.ts\""
+  },
+  "dependencies": {
+    "@jagentchill/protocol": "workspace:*",
+    "zod": "^3.25.0",
+    "@jagentchill/storage": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4"
+  }
+}

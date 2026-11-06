@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd
+- tapOn:
+    id: home-recent-project-.*
+- waitForAnimationToEnd
+- tapOn:
+    id: editor-export

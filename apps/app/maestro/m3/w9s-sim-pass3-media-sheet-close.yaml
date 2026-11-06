@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 50%, 5%
+- waitForAnimationToEnd
+- assertNotVisible:
+    id: media-sheet
+- assertVisible:
+    id: compact-toolbar

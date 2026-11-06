@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: "50%, 14%"
+    end: "50%, 70%"
+    duration: 600
+- tapOn: { id: script-back }
+- assertVisible: { id: scripts-new }
+- tapOn: Open navigation
+- tapOn: New
+- tapOn: Close
+- assertVisible: New project

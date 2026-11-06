@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 65%, 64%
+    end: 55%, 64%

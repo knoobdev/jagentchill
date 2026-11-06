@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn: Workflows
+- waitForAnimationToEnd
+- assertVisible:
+    id: workflow-new
+- assertVisible: Search workflows

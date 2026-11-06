@@ -1,0 +1,19 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: host-row-adb4e85f5058190b597155b43347b2b8
+- assertVisible:
+    id: menu-add
+- tapOn:
+    id: menu-add
+- assertVisible: Add connection
+- assertVisible:
+    id: add-connection-method-paste
+- tapOn:
+    id: add-connection-method-paste
+- assertVisible: Pairing link
+- assertVisible:
+    id: pairing-link-input
+- tapOn: Cancel
+- assertVisible: New project
+- assertVisible: JAgentChill

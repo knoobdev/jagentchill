@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: player-play
+- tapOn:
+    id: compact-close
+- assertVisible: Projects

@@ -1,0 +1,15 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-workflows }
+- tapOn: { id: workflow-new }
+- assertVisible: { id: wf-canvas }
+- assertVisible: { id: wf-open-palette }
+- assertVisible: { id: wf-run }
+- tapOn: { id: wf-open-palette }
+- assertVisible: { id: wf-palette-agent }
+- tapOn: { id: wf-palette-agent }
+- tapOn: { id: wf-configure }
+- assertVisible: { id: wf-inspector }

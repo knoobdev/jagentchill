@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- assertVisible: Settings
+- tapOn: Settings
+- scroll
+- assertVisible: Connections and devices
+- tapOn: Connections and devices
+- assertVisible: Addresses this device can use to reach JAgentChill.
+- assertVisible: Add connection
+- assertVisible: Devices
+- assertVisible: Pair a device
+- scroll
+- assertVisible: Connected via
+- assertVisible: Key fingerprint

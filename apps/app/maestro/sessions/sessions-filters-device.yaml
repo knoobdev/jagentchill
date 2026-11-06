@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: sessions-index
+- assertVisible: Search sessions and messages
+- assertVisible:
+    id: sessions-list
+- assertVisible:
+    id: sessions-filters-open
+- tapOn:
+    id: sessions-filters-open
+- assertVisible:
+    id: sessions-filters-sheet
+- assertVisible: Filter sessions
+- assertVisible: Sort sessions
+- assertVisible: Runtime

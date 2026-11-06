@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: question-text
+- tapOn:
+    id: session-menu
+- assertVisible: Search conversation
+- assertVisible: Open workspace
+- assertVisible: View carried context
+- takeScreenshot: session-menu-native.png

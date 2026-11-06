@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: session-menu
+- assertVisible: View carried context
+- tapOn: View carried context
+- assertVisible: Carried context

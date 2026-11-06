@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: JAgentChill
+- waitForAnimationToEnd
+- assertVisible: Hosts
+- assertVisible:
+    id: host-switcher-list
+- takeScreenshot: hosts-from-drawer-before-disconnect.png

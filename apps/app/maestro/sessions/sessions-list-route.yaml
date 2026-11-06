@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Menu
+- tapOn:
+    id: nav-sessions
+- waitForAnimationToEnd
+- assertVisible:
+    id: sessions-list
+- assertVisible: Search sessions and messages
+- takeScreenshot: sessions-list-mobile.png

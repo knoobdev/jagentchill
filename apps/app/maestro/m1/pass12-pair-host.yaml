@@ -1,0 +1,19 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Add a host…
+- assertVisible: Add connection
+- tapOn:
+    id: add-connection-method-paste
+- assertVisible: Pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible:
+    id: pairing-link-input
+- assertVisible: Name of this device
+- tapOn: Continue
+- assertVisible: Verification code
+- assertVisible:
+    id: pairing-verification-code

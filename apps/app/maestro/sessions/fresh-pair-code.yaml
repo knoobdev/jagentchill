@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Cancel
+- waitForAnimationToEnd
+- tapOn:
+    text: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code

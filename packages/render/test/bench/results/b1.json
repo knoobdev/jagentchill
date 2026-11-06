@@ -1,0 +1,116 @@
+{
+  "measured": {
+    "backend": "webgpu",
+    "software": false,
+    "seconds": 10,
+    "singleLayer": {
+      "p95": 8.200000047683716,
+      "frames": 281,
+      "droppedPercent": 0.3546099290780142
+    },
+    "preview": {
+      "p95": 18.19999998807907,
+      "frames": 283,
+      "droppedPercent": 0.35211267605633806,
+      "countedDropped": 0,
+      "quality": "full",
+      "audioClock": true,
+      "gaps": [],
+      "slowest": [
+        26,
+        26,
+        26,
+        23,
+        22,
+        21,
+        21,
+        21
+      ]
+    },
+    "patchSamples": [
+      23,
+      11,
+      12,
+      12,
+      11
+    ],
+    "patchSpans": [
+      {
+        "build": 0,
+        "sync": 0,
+        "render": 1,
+        "drawn": 15,
+        "textures": {
+          "video:m": 0,
+          "video:c": 0,
+          "video:b": 0
+        }
+      },
+      {
+        "build": 0,
+        "sync": 0,
+        "render": 1,
+        "drawn": 8,
+        "textures": {
+          "video:m": 0,
+          "video:c": 0,
+          "video:b": 0
+        }
+      },
+      {
+        "build": 0,
+        "sync": 0,
+        "render": 1,
+        "drawn": 8,
+        "textures": {
+          "video:m": 0,
+          "video:c": 0,
+          "video:b": 0
+        }
+      },
+      {
+        "build": 0,
+        "sync": 0,
+        "render": 1,
+        "drawn": 9,
+        "textures": {
+          "video:m": 0,
+          "video:c": 0,
+          "video:b": 0
+        }
+      },
+      {
+        "build": 0,
+        "sync": 0,
+        "render": 1,
+        "drawn": 8,
+        "textures": {
+          "video:m": 0,
+          "video:c": 0,
+          "video:b": 0
+        }
+      }
+    ],
+    "seekNearP95": 190.80000001192093,
+    "seekRandomP95": 215.69999998807907,
+    "scrubP95": 11.5,
+    "patchP95": 22.600000023841858,
+    "export": {
+      "frames": 90,
+      "bytes": 3058353,
+      "ms": 1929.5,
+      "speed": 1.5548069448043536
+    }
+  },
+  "budgets": {
+    "previewP95Ms": 33.3,
+    "droppedPercent": 2,
+    "singleLayerP95Ms": 16.6,
+    "seekNearP95Ms": 250,
+    "seekRandomP95Ms": 500,
+    "scrubP95Ms": 100,
+    "patchMs": 50,
+    "exportSpeed": 1
+  },
+  "exceeded": []
+}

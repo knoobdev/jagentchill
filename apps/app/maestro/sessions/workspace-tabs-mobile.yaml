@@ -1,0 +1,22 @@
+appId: dev.jagentchill.devclient
+---
+# Run after opening Session actions → Open workspace. Assets is the file list, Worklog is the plan/action record, Agents is the team view.
+- assertVisible:
+    id: workspace-pane
+- assertVisible:
+    id: workspace-tab-worklog
+- tapOn:
+    id: workspace-tab-assets
+- assertVisible:
+    id: workspace-tab-assets
+- tapOn:
+    id: workspace-tab-agents
+- assertVisible:
+    id: workspace-tab-agents
+- tapOn:
+    id: workspace-tab-worklog
+- assertVisible:
+    id: workspace-tab-worklog
+- assertVisible:
+    id: workspace-back-to-chat
+- takeScreenshot: workspace-tabs-mobile.png

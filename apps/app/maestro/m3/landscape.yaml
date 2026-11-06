@@ -1,0 +1,23 @@
+appId: dev.jagentchill.devclient
+---
+- setOrientation: LANDSCAPE
+- assertVisible:
+    id: compact-preview-pane
+- assertVisible:
+    id: transport-row
+- assertVisible:
+    id: compact-timeline-pane
+- assertVisible:
+    id: compact-timeline
+- tapOn:
+    id: tool-root.more
+- assertVisible:
+    id: tool-sheet-slot
+- assertVisible:
+    id: tool-sheet
+- assertVisible:
+    id: compact-preview
+- pressKey: Back
+- assertNotVisible:
+    id: tool-sheet
+- setOrientation: PORTRAIT

@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Continue
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: Verification code

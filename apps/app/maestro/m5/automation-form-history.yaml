@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-automations }
+- tapOn: { id: automation-create }
+- assertVisible: { id: automation-editor }
+- assertVisible: { id: automation-name }
+- assertVisible: { id: automation-save }

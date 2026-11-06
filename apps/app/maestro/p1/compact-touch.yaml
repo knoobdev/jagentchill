@@ -1,0 +1,30 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Projects
+- waitForAnimationToEnd
+- assertVisible: New project
+- tapOn:
+    id: project-New project
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- assertVisible:
+    id: compact-timeline
+- assertVisible:
+    id: player-play
+- swipe:
+    from:
+      id: compact-timeline
+      point: "75%,70%"
+    to:
+      id: compact-timeline
+      point: "25%,70%"
+    duration: 700
+- assertVisible:
+    id: playhead
+- pinch:
+    id: compact-timeline
+    scale: 1.4
+- assertVisible:
+    id: compact-timeline

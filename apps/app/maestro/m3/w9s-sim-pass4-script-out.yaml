@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: { id: script-back }
+- waitForAnimationToEnd
+- assertVisible: Scripts
+- assertVisible: { id: mobile-global-search }

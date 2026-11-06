@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- pinch:
+    id: compact-timeline
+    scale: 1.5
+- assertVisible:
+    id: compact-timeline
+- assertVisible:
+    id: playhead

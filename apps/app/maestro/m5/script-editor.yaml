@@ -1,0 +1,18 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-projects }
+- tapOn: { id: mobile-global-search }
+- inputText: Scripts
+- hideKeyboard
+- tapOn: { id: menu-go-scripts }
+- tapOn: { id: scripts-new }
+- assertVisible: { id: script-editor }
+- assertVisible: { id: script-back }
+- assertVisible: { id: script-bottom-bar }
+- assertVisible: { id: script-bottom-navigator }
+- assertVisible: { id: script-bottom-shots }
+- tapOn: { id: script-bottom-navigator }
+- assertVisible: { id: script-navigator }

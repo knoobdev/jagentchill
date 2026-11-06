@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: timeline-zoom-in
+- assertVisible:
+    id: timeline-zoom-level
+    text: 125%

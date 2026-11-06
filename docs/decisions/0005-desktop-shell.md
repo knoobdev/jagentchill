@@ -1,0 +1,10 @@
+# 0005 — Desktop shell: four decisions taken while building it
+
+Ngày: 2026-10-06. Môi trường: macOS arm64, Electron 44.5.1 (Node 24.21.0), Node 24.17.0 for the host. Each line is what the code does and why; all four were hit in real runs of `apps/desktop/e2e/run.mjs`.
+
+| # | Decision | Why |
+|---|---|---|
+| 1 | **CSP has `worker-src 'self' blob:`.** The single policy text in `specs/security-privacy/spec.md` ("Desktop and embedded web hardening") now carries it; `packages/desktop-core/src/scheme.ts` emits it. | The app starts its workers from `blob:` URLs. Without the directive `script-src` is the fallback and Chromium refused every worker (logged as a CSP violation in `main.log`). |
+| 2 | **A mock key store counts as no key store.** The main process removes Chromium's `--use-mock-keychain` switch at start and reports the OS store as unavailable while the switch is present. | Playwright's Electron launcher adds the switch; `safeStorage` then encrypts with a fixed key, which protects nothing — the same reason the Linux `basic_text` backend is refused. Data written under the mock could not be decrypted by a normal launch. |
+| 3 | **The signer signs a `request` for a host that is not yet in the registry only while that host's offer is being enrolled, and only for `/jagentchill/v1/pair/verify` and `/jagentchill/v1/pair/status`.** | "Structured signing interface" refuses request signatures for unknown hosts, but the last two steps of enrolment are signed requests to a host that is not paired yet. The renderer names the offer with `device.beginEnrolment`; the window closes at `endEnrolment` or after 10 minutes. |
+| 4 | **The bootstrap file holds only the device token; the host's public identity is read from `GET /jagentchill/v1/health` on the loopback port the app itself chose, and the `gatewayId` must equal the digest of the returned key.** The key is pinned in the host record from then on. | The scenario "the bootstrap file holds only the device token" is kept literally. The app spawns the server on a port it probed free and never attaches to a port something else answers on. |

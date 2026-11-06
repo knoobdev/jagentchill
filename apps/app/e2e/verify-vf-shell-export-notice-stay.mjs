@@ -1,0 +1,23 @@
+// Evidence variant: close export dialog, continue working in editor while actual export completes.
+// Actual UI export in background, generated local media, OPFS save-picker stand-in, Notification recorder via safety preload.
+import {chromium} from 'playwright';import {mkdirSync,writeFileSync} from 'node:fs';import {execFileSync} from 'node:child_process';
+const shots=process.argv[2],base=process.argv[3];mkdirSync(shots,{recursive:true});
+const clip=`${shots}/vf-red.mp4`;execFileSync('ffmpeg',['-loglevel','error','-y','-f','lavfi','-i','color=c=red:s=640x360:r=30:d=20','-c:v','libx264','-pix_fmt','yuv420p',clip]);
+const browser=await chromium.launch();const context=await browser.newContext({viewport:{width:1440,height:900},acceptDownloads:true});
+await context.addInitScript(()=>{window.showSaveFilePicker=async o=>(await navigator.storage.getDirectory()).getFileHandle(o.suggestedName,{create:true});});
+const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));const vis=l=>l.filter({visible:true}).first();const tid=n=>vis(page.getByTestId(n));const btn=n=>vis(page.getByRole('button',{name:n,exact:true}));let failure;
+try{
+ await page.goto(base+'/projects',{waitUntil:'networkidle'});await btn('Create your first project').click();await page.waitForURL(/\/editor\//);await tid('editor-bar').waitFor();console.log('stage editor');
+ const [chooser]=await Promise.all([page.waitForEvent('filechooser'),tid('media-dropzone').click()]);await chooser.setFiles(clip);await tid('label-vf-red.mp4').waitFor();await tid('thumb-vf-red.mp4').dblclick();await tid('kf-opacity').waitFor();console.log('stage imported');
+ await tid('open-export').click();await tid('export-dialog').waitFor();await page.waitForTimeout(1000);await tid('export-start').click();await tid('export-progress-view').waitFor();console.log('stage export-running');
+ await tid('export-dismiss').click();console.log('stage dialog dismissed, continue working in editor');
+ await tid('footer-notifications').click();await tid('inbox').waitFor();console.log('stage inbox waiting real export');
+ const entry=page.getByTestId('inbox-entry').filter({visible:true,hasText:'Export finished:'});await entry.waitFor({timeout:120000});
+ const snapshot=await entry.evaluate(n=>({text:n.innerText,read:n.getAttribute('data-read'),category:n.getAttribute('data-category'),waiting:n.getAttribute('data-waiting'),group:n.closest('[data-testid^="inbox-group-"]')?.getAttribute('data-testid')}));
+ const badge=Number((await tid('footer-notifications').getAttribute('aria-label')).match(/\d+/)?.[0]??0);
+ console.log('export inbox '+JSON.stringify({...snapshot,unread:badge}));if(snapshot.category!=='finished'||snapshot.waiting!=='false'||snapshot.read!=='false'||badge!==1)throw Error('wrong export entry/count');
+ await page.screenshot({path:shots+'/export-finished-inbox.png'});await entry.getByTestId('inbox-entry-link').click();await page.waitForURL(/\/exports\/history\?job=/);await page.waitForTimeout(700);
+ const after=Number((await tid('footer-notifications').getAttribute('aria-label')).match(/\d+/)?.[0]??0);if(after!==0)throw Error('unread badge did not clear');
+ const outputs=await page.evaluate(async()=>{const root=await navigator.storage.getDirectory(),files=[];for await(const [name,handle]of root.entries())if(handle.kind==='file'&&name.endsWith('.mp4'))files.push({name,size:(await handle.getFile()).size});return files});
+ if(!outputs.some(x=>x.size>0))throw Error('no actual export bytes');console.log(`export clicked route=${page.url()} unread=${after} saved-files=${JSON.stringify(outputs)}`);writeFileSync(shots+'/result.json',JSON.stringify({snapshot,badge,route:page.url(),after,outputs,errors},null,2));await page.screenshot({path:shots+'/export-clicked-history.png'});console.log('PASS 1/1 actual finished export -> centre -> correct history job; unread 1 -> 0');
+}catch(e){failure=e;console.error(String(e));console.error('screen '+await page.locator('body').innerText());await page.screenshot({path:shots+'/failure.png'});await page.goto(base+'/exports/history',{waitUntil:'networkidle'});console.error('history-after-timeout '+await page.locator('body').innerText());await page.screenshot({path:shots+'/failure-history.png'});}finally{await browser.close();}if(failure||errors.length)process.exitCode=1;

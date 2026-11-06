@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    point: 50%,65%
+- assertVisible:
+    id: compact-timeline
+- assertVisible:
+    id: tool-clip.extract-audio

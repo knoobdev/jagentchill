@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Audio
+- assertVisible: Sounds
+- tapOn: Sounds
+- assertVisible:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: tool-sheet-close

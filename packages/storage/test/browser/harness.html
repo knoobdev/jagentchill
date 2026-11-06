@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JAgentChill storage — browser harness</title>
+<script type="importmap">__IMPORT_MAP__</script>
+</head>
+<body>
+<pre id="status">running</pre>
+<script type="module">
+import { run } from "./harness.ts";
+try { window.__result = await run(); } catch (error) { window.__result = { fatal: String(error && error.stack || error) }; }
+document.getElementById("status").textContent = "done";
+</script>
+</body>
+</html>

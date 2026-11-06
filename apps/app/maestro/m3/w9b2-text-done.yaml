@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Mobile exact words
+- pressKey: Enter
+- assertNotVisible: done
+- assertVisible:
+    id: text-content
+- assertVisible:
+    id: tool-sheet-close

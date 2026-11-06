@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Connections and devices
+- assertVisible: Pair a device
+- assertVisible: W9 M2 Fixture Host
+- assertVisible: Connected via
+- assertVisible: Key fingerprint

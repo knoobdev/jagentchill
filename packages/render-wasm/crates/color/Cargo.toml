@@ -1,0 +1,11 @@
+[package]
+name = "color"
+version = "0.1.0"
+edition = "2024"
+description = "Colour maths of the compositor: transfer functions, blend formulas, colour wheels and LUT interpolation."
+
+[lib]
+path = "src/color.rs"
+crate-type = ["rlib"]
+
+[dependencies]

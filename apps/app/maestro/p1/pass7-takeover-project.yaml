@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Take over
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: New project
+- assertVisible: Export

@@ -1,0 +1,17 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: home-open-composer
+- tapOn:
+    id: home-open-composer
+- assertVisible:
+    id: modal
+- inputText: Plan a vertical teaser
+- assertVisible:
+    id: composer-attach
+- assertVisible:
+    id: context-meter
+- assertVisible:
+    id: composer-dictate
+- assertVisible:
+    id: composer-send

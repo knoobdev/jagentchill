@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- assertVisible: New project
+- tapOn: New project
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: { id: compact-editor }
+- assertVisible: { id: compact-close }
+- assertVisible: { id: editor-bar }
+- assertVisible: { id: compact-toolbar }

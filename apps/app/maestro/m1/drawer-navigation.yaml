@@ -1,0 +1,24 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Open navigation
+- tapOn:
+    text: Menu
+    optional: true
+- assertVisible:
+    id: drawer
+- assertVisible:
+    id: nav-library
+- assertVisible:
+    id: connection-chip
+- assertVisible:
+    id: footer-settings
+- assertVisible:
+    id: footer-notifications
+- assertVisible:
+    id: footer-help
+- tapOn:
+    id: nav-library
+- assertNotVisible:
+    id: drawer
+- assertVisible: Library

@@ -1,0 +1,22 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-markers
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-back
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.more
+- assertVisible:
+    id: more-sheet
+- takeScreenshot: root-more
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: tool-sheet

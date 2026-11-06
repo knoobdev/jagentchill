@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: "17%,69%"
+- tapOn:
+    point: "17%,76%"
+- tapOn:
+    point: "83%,69%"
+- tapOn:
+    point: "50%,69%"
+- tapOn:
+    point: "50%,69%"
+- tapOn:
+    point: "83%,83%"
+- waitForAnimationToEnd
+- assertVisible: New project

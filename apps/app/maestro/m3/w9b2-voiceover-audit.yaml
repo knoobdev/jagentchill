@@ -1,0 +1,19 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 10%,92%
+    end: 90%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.audio
+- assertVisible:
+    id: tool-audio.voiceover
+- tapOn:
+    id: tool-audio.voiceover
+- assertVisible:
+    id: recorder
+- takeScreenshot: voiceover-setup
+- tapOn:
+    text: Cancel
+- assertNotVisible:
+    id: recorder

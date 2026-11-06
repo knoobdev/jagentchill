@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn: Automations
+- waitForAnimationToEnd
+- tapOn:
+    point: 89%, 45%
+- assertVisible: Open
+- tapOn: Open
+- waitForAnimationToEnd
+- assertVisible:
+    id: automation-detail
+- assertVisible:
+    id: automation-summary
+- takeScreenshot: automation-detail-device.png

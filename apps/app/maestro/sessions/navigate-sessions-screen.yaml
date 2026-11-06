@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: "20%,27%"
+- waitForAnimationToEnd
+- assertVisible: Sessions

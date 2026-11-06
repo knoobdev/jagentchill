@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "4"
+- inputText: "6"
+- inputText: "9"
+- inputText: "6"
+- inputText: "9"
+- inputText: "0"
+- tapOn:
+    text: Pair
+- waitForAnimationToEnd

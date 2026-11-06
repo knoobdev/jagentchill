@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: bar-undo
+- assertVisible: clip-b.mp4
+- assertVisible:
+    id: host-preview-label

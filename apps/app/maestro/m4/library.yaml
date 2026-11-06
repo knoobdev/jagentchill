@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-library }
+- assertVisible: Library
+- assertVisible: Templates
+- assertVisible: Preset packs
+- assertVisible: Fonts
+- tapOn: Fonts
+- assertVisible: Search Fonts
+- assertVisible: Sort by
+- assertVisible: { id: library-grid }

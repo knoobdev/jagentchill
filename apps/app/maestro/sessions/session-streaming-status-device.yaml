@@ -1,0 +1,15 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: composer-input
+- tapOn:
+    id: composer-input
+- inputText: '#script {"steps":[{"say":"The delayed phone stub completed.","chunks":30,"chunk_ms":300,"hold_ms":12000}]}'
+- tapOn:
+    id: composer-send
+- assertVisible:
+    id: status-line
+- takeScreenshot: session-streaming-status-device.png
+- extendedWaitUntil:
+    visible: The delayed phone stub completed.
+    timeout: 20000

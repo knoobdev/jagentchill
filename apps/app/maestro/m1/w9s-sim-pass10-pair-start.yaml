@@ -1,0 +1,21 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Hosts
+- tapOn:
+    point: 22%, 95%
+- assertVisible: Add connection
+- tapOn:
+    id: add-connection-method-paste
+- assertVisible: Pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible:
+    id: pairing-link-input
+- tapOn: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code
+- assertVisible:
+    id: pairing-verification-code

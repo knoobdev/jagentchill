@@ -1,0 +1,17 @@
+[package]
+name = "text"
+version = "0.1.0"
+edition = "2024"
+description = "Engine-side text: OpenType shaping, bidirectional reordering, line breaking and glyph outlines from font bytes."
+
+[lib]
+path = "src/text.rs"
+crate-type = ["rlib"]
+
+[dependencies]
+rustybuzz = "0.20"
+ttf-parser = "0.25"
+unicode-bidi = "0.3"
+unicode-linebreak = "0.1"
+unicode-segmentation = "1"
+serde = { version = "1", features = ["derive"] }

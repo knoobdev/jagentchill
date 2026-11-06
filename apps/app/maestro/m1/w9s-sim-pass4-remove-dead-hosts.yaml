@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: { point: "42%, 10%" }
+- assertVisible: Hosts
+- tapOn: { text: "jcode.tailf900c1.ts.net:19050", optional: true }
+- waitForAnimationToEnd
+- assertVisible: { text: "Disconnect from JAgentChill", optional: true }
+- tapOn: { text: "Disconnect from JAgentChill", optional: true }
+- waitForAnimationToEnd
+- assertVisible: { id: host-switcher }

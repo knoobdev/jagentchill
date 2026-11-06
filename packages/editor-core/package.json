@@ -1,0 +1,25 @@
+{
+  "name": "@jagentchill/editor-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure TypeScript editor model: document invariants, validator, canonical form, state patches, classic mapping.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./script-files": "./src/script/files/index.ts"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.ts\""
+  },
+  "dependencies": {
+    "@jagentchill/content": "workspace:*",
+    "@jagentchill/protocol": "workspace:*",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "docx": "^9.8.1",
+    "encoding-japanese": "^2.4.0",
+    "fast-xml-parser": "^4.5.7",
+    "fflate": "^0.8.3",
+    "pdf-lib": "^1.17.1",
+    "zod": "^3.25.0"
+  }
+}

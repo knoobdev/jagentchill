@@ -1,0 +1,26 @@
+{
+  "name": "@jagentchill/client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Client side of the JAgentChill product channel: device identity, pairing and the signed connection. Runs in browsers, React Native and Node.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./crypto": { "react-native": "./src/crypto.native.ts", "default": "./src/crypto.ts" }
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.ts\""
+  },
+  "dependencies": {
+    "@jagentchill/editor-core": "workspace:*",
+    "@jagentchill/protocol": "workspace:*",
+    "@noble/curves": "1.9.7",
+    "@noble/hashes": "1.8.0",
+    "expo-crypto": "~57.0.3"
+  },
+  "devDependencies": {
+    "@jagentchill/server": "workspace:*",
+    "@jagentchill/storage": "workspace:*",
+    "fake-indexeddb": "^6.0.0"
+  }
+}

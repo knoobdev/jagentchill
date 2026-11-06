@@ -1,0 +1,47 @@
+// The EngineSurface port: what application UI code may import.
+export { createEngineSurface, type EngineSurface, type EngineSurfaceOptions } from "./surface/same-thread.ts";
+export { EngineSurfacePort, type EngineEvent, type PortOptions } from "./surface/port.ts";
+export { EngineFailure } from "./surface/errors.ts";
+export { createPersonMatteWriter, personMatteStill, personMatteEntry, personMatteKey, personMatteAssets, PERSON_MATTE_KIND, type PersonMatteWriter } from "./export/person-matte.ts";
+export { runEngineWorker } from "./surface/export-worker.ts";
+export { runDeferredProbes, probeVerdict, cachedProbeResult, PROBE_DELAY_MS, PROBE_BUDGET_MS, type ProbeResult } from "./engine/deferred-probes.ts";
+export { PlayheadExtrapolator } from "./surface/mobile.ts";
+
+// Engine internals, for the engine's own surfaces, tools and tests.
+export { EngineDispatcher, type CommandHandlers } from "./surface/dispatcher.ts";
+export { Engine, type EngineOptions } from "./engine/engine.ts";
+export { CompositorDriver, TEXTURE_IDLE_FRAMES, fitTexture, type ResolvedTexture } from "./engine/compositor.ts";
+export { previewRenderSize, QualityGovernor, QUALITY_FACTORS, type QualityLevel } from "./engine/quality.ts";
+export { missingCapabilities, probeRuntime, audioEncodeConstraint, POOL_BUDGETS, ENGINE_VERSION } from "./engine/probe.ts";
+export { buildScene, serializeScene, NODE_TYPES, type RootNode, type SceneNode, type ElementNode, type TransitionNode, type BackgroundNode, type SceneDiagnostic } from "./scene/build.ts";
+export { buildFrame, type BuiltFrame, type TextureRequest, type FrameOptions } from "./frame/build.ts";
+export * from "./frame/descriptor.ts";
+export * from "./resolve/animation.ts";
+export * from "./resolve/layout.ts";
+export { resolveClipAnimation, clipAnimationPose, knownClipAnimation, periodicRowsMatch, NEUTRAL_POSE, type ClipPose, type ClipAnimation } from "./resolve/clip-animation.ts";
+export * from "./audio/gain.ts";
+export * from "./audio/limiter.ts";
+export * from "./audio/resample.ts";
+export * from "./audio/mixdown.ts";
+export * from "./audio/dsp.ts";
+export { VoiceChain, PitchTracker, butterworth4, voiceEffectOf, voiceLatency, voiceSeed, VOICE_PITCH, VOICE_EFFECT_IDS, type VoiceEffect } from "./audio/voice.ts";
+export { pitchPreservation, rateRange, ClipStretcher, STRETCH_RANGE, type ClipStretch } from "./audio/stretch.ts";
+export { exportFrameCount, exportFrameTime, checkExportRequest, FINALISING_TIMEOUT_MS, createFinalisingWatchdog, finalizeOrCancel } from "./export/session.ts";
+export { createGifWriter, indexFrame, lzw, gifFrameDelay, type GifOptions, type GifWriter } from "./export/gif.ts";
+export { rasterAiLabel, blendAiLabel, type LabelBitmap } from "./export/metadata.ts";
+export { VideoSession, SessionPool, SESSION_LIMITS } from "./decode/video-session.ts";
+export { ByteLru } from "./textures/lru.ts";
+export * from "./surface/sink.ts";
+export * from "./surface/host-protocol.ts";
+export { BridgeLatencyMonitor, RestartBudget, fitBridgeCommand, encodedBytes, singleRange, isEngineNavigation, enginePath, ENGINE_ORIGINS, MOBILE_BUDGETS, type TimeEvent, type BridgeMessage } from "./surface/mobile.ts";
+export { parseGradient, rasterGradient, parseCssColor } from "./scene/gradient.ts";
+export { FontRegistry, BASELINE_FAMILIES, FALLBACK_FAMILIES, type FontSource } from "./text/fonts.ts";
+export { measureText, byteOffset, bubbleBox, DEFAULT_TEXT_LIMIT, type TextSpec, type TextLayout, type MeasuredText, type TextLimit } from "./text/layout.ts";
+export { textSpec, applyTextCase, fnv1a, wordStates, wordRanges, highlightRanges, synthesiseWords } from "./text/spec.ts";
+export { motionSlots, blockPose, unitPose, rasterMotion, motionUnits, staggered, glitchOf, rotateHue, signedHash, knownTextAnimation, type MotionSlot, type MotionSlots, type TextMotion, type BlockPose, type UnitPose, type UnitKind } from "./text/motion.ts";
+export { placeText, wordSpans, type Placement, type PlacedGlyph } from "./text/units.ts";
+export { loadWasm, provideWasm } from "./engine/wasm.ts";
+export { rasterText, rasterSize } from "./text/raster.ts";
+export { colorChain, wheelValues, wheelTransfer, curveTable, curvesPixels, parseCube, type ColorChain, type CurveSet } from "./frame/color.ts";
+export { paramUniforms, cubicBezier, TRANSITION_EASING, transitionShader, effectPasses, EFFECT_PASS_SHADERS, type TransitionShader, type PassEntry, type EffectTiming } from "./frame/library.ts";
+export { parseRecipe, applyRecipe, bakeRecipe, cubeText, curveAt, filterRecipe, filterCube, BAKED_LUT_SIZE, type RecipeAdjustments } from "./frame/recipe.ts";

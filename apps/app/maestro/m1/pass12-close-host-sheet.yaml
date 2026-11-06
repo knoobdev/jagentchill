@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: "50%, 26%"
+    end: "50%, 90%"
+    duration: 500
+- waitForAnimationToEnd:
+    timeout: 5000
+- assertVisible:
+    id: home-composer-dock

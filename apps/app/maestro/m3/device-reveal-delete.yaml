@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 90%, 93%
+    end: 20%, 93%
+    duration: 500
+- assertVisible: Delete

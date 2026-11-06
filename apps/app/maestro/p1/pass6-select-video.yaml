@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Add
+- tapOn:
+    point: 15%, 22%
+- assertVisible: Add
+- tapOn: Add
+- waitForAnimationToEnd:
+    timeout: 30000
+- assertVisible:
+    id: compact-editor

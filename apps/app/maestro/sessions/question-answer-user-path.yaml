@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: question-card
+- assertVisible: "Which aspect ratio should I use?  16:9"
+- assertNotVisible: '"ratio"'

@@ -1,0 +1,17 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn: Workflows
+- waitForAnimationToEnd
+- tapOn: Runs
+- waitForAnimationToEnd
+- assertVisible: Search runs
+- tapOn:
+    point: 89%, 57%
+- assertVisible: Open
+- tapOn: Open
+- waitForAnimationToEnd
+- takeScreenshot: workflow-run-device.png
+- assertVisible:
+    id: run-title

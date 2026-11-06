@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 70%,65%
+    end: 66%,65%
+    duration: 300
+- assertVisible:
+    id: compact-time

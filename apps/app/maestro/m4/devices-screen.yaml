@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Devices
+- assertVisible: Hosts paired with this device
+- assertVisible: Connect a host

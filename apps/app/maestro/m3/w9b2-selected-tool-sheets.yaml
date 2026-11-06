@@ -1,0 +1,41 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: tool-clip.transform
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: selected-transform
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: tool-sheet
+- tapOn:
+    id: tool-clip.cutout
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: selected-remove-bg
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-clip.mask
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: selected-mask
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-clip.speed
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: selected-speed
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-clip.animation
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: selected-animations
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: tool-sheet

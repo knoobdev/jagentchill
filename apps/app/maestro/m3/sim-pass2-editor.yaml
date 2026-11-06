@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- setOrientation: PORTRAIT
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: Projects

@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: "5"
+- tapOn: "9"
+- tapOn: "0"
+- tapOn: "3"
+- tapOn: "1"
+- tapOn: "2"
+- waitForAnimationToEnd
+- assertVisible: New project
+- takeScreenshot: paired-home.png

@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "196117"
+- waitForAnimationToEnd
+- assertVisible: JAgentChill

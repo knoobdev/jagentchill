@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: { point: "42%, 10%" }
+- assertVisible: Hosts
+- tapOn: "Add a host…"
+- assertVisible: "Add connection"
+- tapOn: "Paste pairing link"
+- assertVisible: "Pairing link"
+- tapOn: { id: pairing-link-paste }
+- assertVisible: { id: pairing-link-input }
+- tapOn: Continue
+- assertVisible: "Enter the code shown next to"

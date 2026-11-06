@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 95%, 50%
+- assertVisible: New project
+- assertVisible: Attach
+- assertVisible: Get started
+- swipe:
+    start: 50%, 72%
+    end: 50%, 34%
+- assertVisible: Make a video from a prompt

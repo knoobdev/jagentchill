@@ -1,0 +1,98 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: tool-root.audio
+- tapOn:
+    id: tool-root.stickers
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-stickers
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-root.filters
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-filters
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-root.effects
+- assertVisible:
+    id: tool-fx.video
+- tapOn:
+    id: tool-fx.video
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-effects
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-back
+- tapOn:
+    id: tool-root.text
+- assertVisible:
+    id: tool-text.templates
+- tapOn:
+    id: tool-text.templates
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-text-templates
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-back
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.captions
+- assertVisible:
+    id: tool-cap.import
+- tapOn:
+    id: tool-cap.import
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-captions
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-cap.transcript
+- assertVisible:
+    id: tool-sheet
+- takeScreenshot: root-transcript
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-back
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.markers
+- assertVisible:
+    id: tool-marker.list
+- tapOn:
+    id: tool-marker.list
+- assertVisible:
+    id: markers-sheet
+- takeScreenshot: root-markers
+- tapOn:
+    id: tool-sheet-close
+- tapOn:
+    id: tool-back
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.more
+- assertVisible:
+    id: more-sheet
+- takeScreenshot: root-more
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: tool-sheet

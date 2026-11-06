@@ -1,0 +1,45 @@
+export * from "./time.ts";
+export * from "./sha256.ts";
+export * from "./canonical.ts";
+export * from "./errors.ts";
+export * from "./patch.ts";
+export * from "./model.ts";
+export * from "./registries.ts";
+export * from "./repair.ts";
+export * from "./validate.ts";
+export * from "./commit.ts";
+export * from "./ids.ts";
+export * from "./history.ts";
+export * from "./ops/shared.ts";
+export * from "./ops/elements.ts";
+export * from "./ops/animation.ts";
+export * from "./ops/keyframes.ts";
+export * from "./ops/clip-animation.ts";
+export * from "./ops/color.ts";
+export * from "./ops/masking.ts";
+export * from "./ops/effects.ts";
+export * from "./ops/content.ts";
+export * from "./ops/text.ts";
+export * from "./ops/audio.ts";
+export * from "./ops/captions.ts";
+export * from "./captions/subtitles.ts";
+export * from "./captions/speech.ts";
+export * from "./content/index.ts";
+export * from "./ops/structure.ts";
+export * from "./ops/project.ts";
+export * from "./ops/media.ts";
+export * from "./classic/v31-to-v32.ts";
+export * as timeline from "./timeline/index.ts";
+export * from "./hash.ts";
+export * from "./catalogue/index.ts";
+export * from "./export/palette.ts";
+export * from "./export/xmp.ts";
+export {
+  Biquad, peaking, shelf, highPass, eqSections, Compressor, ClipChain, VoiceDetector, Ducker, measureLoudness, truePeakDb, normalizeGainDb, clipProcessing, FADE_GAINS, fadeGain,
+  type EqBands, type CompressorSettings, type ClipProcessing, type DuckingSettings, type Loudness, type ProcessedElement, type Fade,
+} from "./audio/processing.ts";
+export * as script from "./script/index.ts";
+export * as workflow from "./workflow/index.ts";
+export * as promptVideo from "./prompt-video/index.ts";
+export * as film from "./film/index.ts";
+export * as template from "./template/index.ts";

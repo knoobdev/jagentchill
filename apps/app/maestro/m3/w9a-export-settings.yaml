@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: open-export
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: export-dialog
+- assertVisible: Export

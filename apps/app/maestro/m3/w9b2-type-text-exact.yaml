@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: text-content
+- eraseText: 40
+- inputText: Mobile exact words
+- assertVisible: Mobile exact words

@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: done
+- assertVisible:
+    id: text-content
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: text-content

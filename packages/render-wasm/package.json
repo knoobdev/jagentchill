@@ -1,0 +1,14 @@
+{
+  "name": "@jagentchill/render-wasm",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The JAgentChill compositor: Rust (wgpu) compiled to WebAssembly.",
+  "exports": { ".": "./pkg/opencut_wasm.js" },
+  "scripts": {
+    "build": "cargo build -p opencut-wasm --target wasm32-unknown-unknown --release && wasm-bindgen target/wasm32-unknown-unknown/release/opencut_wasm.wasm --target web --out-dir pkg && node scripts/patch-glue.mjs",
+    "test:rust": "cargo test --workspace --exclude opencut-wasm",
+    "test": "node --test \"test/browser/*.test.mjs\""
+  },
+  "devDependencies": { "playwright": "*" }
+}

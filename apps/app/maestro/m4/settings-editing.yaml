@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-settings }
+- tapOn: Editing defaults
+- assertVisible: Version snapshot interval
+- assertVisible: Automatic snapshots to keep

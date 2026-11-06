@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: Menu
+- tapOn: New
+- tapOn: Close
+- assertVisible: { id: home-quick-start-new }
+- assertVisible: New project
+- assertNotVisible: { id: script-editor }
+- assertNotVisible: { id: wf-canvas }

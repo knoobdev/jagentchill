@@ -1,0 +1,4 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Host: JAgentChill
+- assertVisible: Host: JAgentChill

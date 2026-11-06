@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Connect a host
+- waitForAnimationToEnd
+- tapOn:
+    id: pairing-link-paste
+- waitForAnimationToEnd
+- tapOn: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code
+- takeScreenshot: pairing-code-fresh.png

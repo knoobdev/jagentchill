@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+# Run on a session fixture with a running turn waiting for the host/model/answer.
+- assertVisible:
+    id: status-line
+- assertVisible:
+    id: status-wait

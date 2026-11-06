@@ -1,0 +1,15 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: compact-editor
+- tapOn:
+    id: tl-ctl-add-media
+- waitForAnimationToEnd:
+    timeout: 10000
+- assertVisible:
+    id: media-sheet
+- assertVisible: Device
+- tapOn: Device
+- assertVisible: Videos
+- assertVisible: Photos
+- assertVisible: Browse files

@@ -1,0 +1,29 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 78%, 95%
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- assertVisible:
+    id: editor-bar
+- assertVisible:
+    id: project-name
+- assertVisible:
+    id: bar-undo
+- assertVisible:
+    id: bar-redo
+- assertVisible:
+    id: open-export
+- assertVisible:
+    id: compact-preview
+- assertVisible:
+    id: transport-row
+- assertVisible:
+    id: compact-timeline-region
+- assertVisible:
+    id: compact-toolbar
+- assertVisible:
+    id: host-preview-label
+- assertVisible: Add media

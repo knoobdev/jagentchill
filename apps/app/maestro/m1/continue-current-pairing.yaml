@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code
+- assertVisible:
+    id: pairing-verification-code

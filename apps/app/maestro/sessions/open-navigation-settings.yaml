@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- assertVisible: Menu

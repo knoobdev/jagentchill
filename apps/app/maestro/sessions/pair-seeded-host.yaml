@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Add connection
+- tapOn:
+    id: add-connection-method-paste
+- assertVisible: Pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible:
+    id: pairing-link-input
+- tapOn: Continue
+- assertVisible: Verification code
+- takeScreenshot: .dev/shots/w9s-sim-pass1/02-seeded-host-verification.png

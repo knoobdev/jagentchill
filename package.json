@@ -1,0 +1,18 @@
+{
+  "name": "jagentchill",
+  "private": true,
+  "packageManager": "pnpm@12.5.1",
+  "engines": {
+    "node": ">=24.17.0"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "pnpm -r test",
+    "server": "node server/src/main.ts",
+    "jagentchill:check:tokens": "node packages/ui/scripts/lint-tokens.ts packages/ui/src apps/app/app apps/app/src",
+    "jagentchill:check:contrast": "node --test packages/ui/test/tokens.test.ts"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

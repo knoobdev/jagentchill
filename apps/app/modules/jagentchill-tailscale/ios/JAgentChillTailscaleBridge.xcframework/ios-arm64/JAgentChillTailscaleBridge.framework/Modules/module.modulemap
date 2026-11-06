@@ -1,0 +1,8 @@
+framework module "JAgentChillTailscaleBridge" {
+	header "ref.h"
+    header "Tailscalebridge.objc.h"
+    header "Universe.objc.h"
+    header "JAgentChillTailscaleBridge.h"
+
+    export *
+}

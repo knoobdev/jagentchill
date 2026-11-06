@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- assertVisible: { id: scripts-new }
+- tapOn: { id: scripts-new }
+- assertVisible: { id: script-editor }
+- assertVisible: { id: script-back }
+- assertVisible: { id: script-bottom-bar }
+- tapOn: { id: script-back }
+- assertVisible: { id: scripts-new }
+- assertNotVisible: { id: script-editor }

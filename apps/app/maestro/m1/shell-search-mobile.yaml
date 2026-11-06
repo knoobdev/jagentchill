@@ -1,0 +1,24 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: mobile-global-search
+- assertVisible:
+    id: command-palette
+- assertVisible:
+    id: command-palette-empty
+- assertVisible: Search projects and commands
+- tapOn: Search projects and commands
+- inputText: Settings
+- assertVisible:
+    id: command-palette-results
+- assertVisible: Commands
+- assertVisible:
+    id: menu-settings
+- tapOn: Search projects and commands
+- eraseText: 64
+- inputText: qzx-no-match
+- assertVisible:
+    id: command-palette-no-results
+- pressKey: Back
+- assertNotVisible:
+    id: command-palette

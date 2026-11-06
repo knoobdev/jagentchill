@@ -1,0 +1,25 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.ratio
+- assertVisible: Project settings
+- assertVisible:
+    id: ratio-16:9
+- takeScreenshot: root-ratio-settings
+- tapOn: Close
+- assertNotVisible: Project settings
+- swipe:
+    start: 90%,92%
+    end: 10%,92%
+    duration: 400
+- tapOn:
+    id: tool-root.background
+- assertVisible: Project settings
+- assertVisible: Background
+- takeScreenshot: root-background-settings
+- tapOn: Close
+- assertNotVisible: Project settings

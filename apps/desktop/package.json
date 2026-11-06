@@ -1,0 +1,39 @@
+{
+  "name": "@jagentchill/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JAgentChill desktop shell: Electron main process, preload bridge and packaging for macOS, Windows and Linux.",
+  "productName": "JAgentChill",
+  "main": "dist/entry.cjs",
+  "scripts": {
+    "build:web": "node scripts/build-web.mjs",
+    "build:main": "node scripts/build-main.mjs",
+    "dev": "node scripts/build-main.mjs && electron .",
+    "runtime": "node scripts/fetch-node.mjs",
+    "pack": "node scripts/package.mjs --dir",
+    "dist": "node scripts/package.mjs",
+    "check:fuses": "node scripts/check-fuses.mjs",
+    "test": "node --test \"test/*.test.ts\"",
+    "e2e": "node e2e/run.mjs"
+  },
+  "dependencies": {
+    "@jagentchill/client": "workspace:*",
+    "@jagentchill/desktop-core": "workspace:*",
+    "@jagentchill/protocol": "workspace:*",
+    "@jagentchill/server": "workspace:*",
+    "@jagentchill/storage": "workspace:*",
+    "electron-updater": "^6.8.9",
+    "ws": "^8.18.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@electron/fuses": "^2.1.3",
+    "@types/node": "^26.6.4",
+    "@types/ws": "^8.18.0",
+    "electron": "44.5.1",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "playwright": "^1.63.0",
+    "typescript": "~6.0.3"
+  }
+}

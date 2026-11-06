@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Delete
+- assertVisible:
+    id: host-preview-label
+- assertVisible:
+    id: bar-undo

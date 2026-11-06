@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: run-back
+- waitForAnimationToEnd
+- tapOn: Open navigation
+- waitForAnimationToEnd
+- tapOn: Automations
+- waitForAnimationToEnd
+- assertVisible:
+    id: automation-create
+- assertVisible: Search automations
+- takeScreenshot: automations-list-device.png

@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: tool-back
+- tapOn:
+    id: tool-root.media
+- assertVisible:
+    id: media-sheet
+- tapOn: Device
+- tapOn: Videos

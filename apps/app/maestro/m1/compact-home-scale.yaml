@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: home-page
+- assertVisible:
+    id: home-mobile-scroll
+- assertVisible: Recent projects
+- assertVisible: No projects yet
+- assertVisible:
+    id: home-composer-dock
+- assertVisible: JAgentChill

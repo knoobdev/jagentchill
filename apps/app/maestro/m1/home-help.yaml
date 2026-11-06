@@ -1,0 +1,47 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: home-quick-start-new
+- assertVisible:
+    id: home-quick-start-import
+- assertVisible:
+    id: home-quick-start-prompt
+- assertVisible:
+    id: home-composer-dock
+- assertVisible: Recent projects
+- assertVisible:
+    id: home-empty-projects
+- assertVisible:
+    id: home-open-composer
+- tapOn:
+    text: Open navigation
+- assertVisible: Menu
+- tapOn:
+    text: Help
+- assertVisible: Starter tips
+- tapOn:
+    text: Starter tips
+- assertVisible: New project
+- swipe:
+    start: 50%, 48%
+    end: 50%, 28%
+- assertVisible: Get started
+- assertVisible:
+    id: home-checklist-project
+- assertVisible: Show starter tips
+- takeScreenshot: .dev/shots/w9-m1/home-get-started.png
+- tapOn:
+    text: Open navigation
+- assertVisible: Menu
+- assertVisible: Help
+- assertVisible: Notifications
+- assertVisible: Settings
+- tapOn:
+    text: Menu
+    optional: true
+- tapOn:
+    id: nav-home
+- assertNotVisible:
+    id: drawer
+- assertVisible:
+    id: home-quick-start-new

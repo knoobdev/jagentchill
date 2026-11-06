@@ -1,0 +1,8 @@
+{
+  "api-key": "api-key", "api-global": "api-key", "api-cn": "api-key", "api-key-cn": "api-key", "standard-api-key": "api-key",
+  "standard-api-key-cn": "api-key", "standard-api-key-intl": "api-key", "plan-api-key-cn": "api-key", "plan-api-key-intl": "api-key",
+  "token-plan-ams": "api-key", "token-plan-cn": "api-key", "token-plan-sgp": "api-key", "coding-global": "api-key", "coding-cn": "api-key",
+  "global": "api-key", "cn": "api-key", "arcee-platform": "api-key", "openrouter": "api-key", "cloud-api-key": "api-key",
+  "cli": "cli-login", "siwc": "cli-login", "setup-token": "setup-token", "local": "local", "existing-server": "local", "custom": "custom-endpoint",
+  "oauth": "oauth", "oauth-cn": "oauth", "entra-id": "oauth", "device": "device-code", "device-enterprise": "device-code", "device-code": "device-code"
+}

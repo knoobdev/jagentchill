@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 50%,82%
+- eraseText: 20
+- inputText: Device proof
+- assertVisible: Device proof
+- pressKey: Back
+- tapOn:
+    id: tool-sheet-close

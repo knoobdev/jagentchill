@@ -1,0 +1,16 @@
+{
+  "cli": { "version": ">= 14.0.0", "appVersionSource": "local" },
+  "build": {
+    "simulator": {
+      "distribution": "internal",
+      "ios": { "simulator": true },
+      "env": { "JAGENTCHILL_IOS_BUNDLE_ID": "dev.jagentchill.simulator" }
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": { "simulator": true },
+      "env": { "JAGENTCHILL_IOS_BUNDLE_ID": "dev.jagentchill.devclient" }
+    }
+  }
+}

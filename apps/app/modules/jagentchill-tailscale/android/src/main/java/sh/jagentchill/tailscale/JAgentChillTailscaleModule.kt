@@ -1,0 +1,229 @@
+package sh.jagentchill.tailscale
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Handler
+import android.os.Looper
+import expo.modules.kotlin.modules.Module
+import expo.modules.kotlin.modules.ModuleDefinition
+import tailscalebridge.Bridge
+import java.io.File
+import java.util.concurrent.Executors
+import java.util.concurrent.atomic.AtomicBoolean
+
+class JAgentChillTailscaleModule : Module() {
+  private var bridge = Bridge()
+  private val worker = Executors.newSingleThreadExecutor()
+  private val nodeLock = Any()
+  private val loginInFlight = AtomicBoolean(false)
+  private var nodeStarting = false
+  private var nodeReady = false
+
+  override fun definition() = ModuleDefinition {
+    Name("JAgentChillTailscale")
+
+    AsyncFunction("getStatus") {
+      synchronized(nodeLock) {
+        if (nodeStarting) return@AsyncFunction "connecting"
+        if (!nodeReady) {
+          val stateDir = stateDirectory()
+          if (!File(stateDir, AUTHENTICATED_MARKER).exists()) {
+            return@AsyncFunction "needs-login"
+          }
+          startInteractiveNodeIfNeeded()
+          return@AsyncFunction "connecting"
+        }
+      }
+      if (bridge.tailnetName().isNotEmpty()) {
+        markAuthenticated()
+        "connected"
+      } else if (File(stateDirectory(), AUTHENTICATED_MARKER).exists()) {
+        // Cold-start restore warm-up: node restored from a previously
+        // authenticated state but the tailnet has not reached Running yet, so
+        // tailnetName() is transiently empty. A passive status probe must NOT
+        // delete the restore marker — that permanently forces every future
+        // cold start back to login even though the saved session is valid.
+        // Report "connecting"; only an explicit sign-out clears the marker.
+        "connecting"
+      } else {
+        "needs-login"
+      }
+    }
+
+    Function("beginInteractiveLogin") {
+      beginInteractiveLogin()
+    }
+
+    Function("prepareInteractiveLogin") {
+      resetUnauthenticatedInteractiveNodeIfNeeded()
+      startInteractiveNodeIfNeeded()
+      mapOf("ok" to true)
+    }
+
+    Function("getAuthURL") {
+      bridge.authURL().trim().takeIf { it.isNotEmpty() }
+    }
+
+    AsyncFunction("startInteractiveLogin") {
+      beginInteractiveLogin()
+    }
+
+    AsyncFunction("loginWithAuthKey") { authKey: String ->
+      val key = authKey.trim()
+      if (key.isEmpty()) {
+        return@AsyncFunction mapOf("ok" to false, "error" to "An auth key is required.")
+      }
+      try {
+        resetUnauthenticatedInteractiveNodeIfNeeded()
+        bridge.start(key, stateDirectory().absolutePath, "jagentchill-mobile", "")
+        synchronized(nodeLock) {
+          nodeStarting = false
+          nodeReady = true
+        }
+        loginInFlight.set(false)
+        markAuthenticated()
+        mapOf("ok" to true)
+      } catch (error: Throwable) {
+        synchronized(nodeLock) {
+          nodeStarting = false
+          nodeReady = false
+        }
+        loginInFlight.set(false)
+        mapOf("ok" to false, "error" to (error.message ?: "Tailscale login failed."))
+      }
+    }
+
+    Function("getProxyAddress") { target: String ->
+      bridge.proxy(target)
+      bridge.localAddress()
+    }
+
+    Function("getDevicePublicKeyB64") {
+      bridge.devicePublicKeyB64().takeIf { it.isNotEmpty() }
+    }
+
+    Function("signNonce") { nonce: String ->
+      bridge.signNonce(nonce)
+    }
+
+    Function("logTechnicalError") { message: String ->
+      android.util.Log.e("JAgentChillPairing", message.take(500))
+    }
+  }
+
+  private fun beginInteractiveLogin(): Map<String, Any> {
+    if (!loginInFlight.compareAndSet(false, true)) {
+      return mapOf("ok" to false, "error" to "A Tailscale login is already in progress")
+    }
+    // Explicit "Sign in with Tailscale": always start from an unauthenticated
+    // node so tsnet issues a fresh browser URL. A stale authenticated node (its
+    // key may no longer be reachable) would otherwise be reused and never emit a
+    // URL, leaving the button doing nothing.
+    forceFreshInteractiveNode()
+    startInteractiveNodeIfNeeded()
+    worker.execute {
+      val deadline = System.currentTimeMillis() + 120_000L
+      while (System.currentTimeMillis() < deadline) {
+        val authUrl = bridge.authURL().trim()
+        if (authUrl.startsWith("https://")) {
+          openBrowser(authUrl)
+          loginInFlight.set(false)
+          return@execute
+        }
+        Thread.sleep(250L)
+      }
+      loginInFlight.set(false)
+    }
+    return mapOf("ok" to true)
+  }
+
+  private fun forceFreshInteractiveNode() {
+    // Drop the in-memory node and wipe persisted tsnet state so the next start
+    // is a fresh, unauthenticated login that always produces a browser URL.
+    synchronized(nodeLock) {
+      bridge = Bridge()
+      nodeReady = false
+      nodeStarting = false
+    }
+    removePersistedTailscaleState()
+  }
+
+  private fun removePersistedTailscaleState() {
+    stateDirectory().listFiles()?.forEach { runCatching { it.deleteRecursively() } }
+  }
+
+  private fun resetUnauthenticatedInteractiveNodeIfNeeded() {
+    // A failed browser attempt leaves tsnet's old auth URL cached in the
+    // bridge. Keep an authenticated node, but replace an unauthenticated one
+    // before the next attempt so Tailscale issues a fresh URL.
+    if (File(stateDirectory(), AUTHENTICATED_MARKER).exists()) return
+
+    val canReset = synchronized(nodeLock) { nodeReady && !nodeStarting }
+    if (!canReset || bridge.tailnetName().isNotEmpty()) return
+
+    synchronized(nodeLock) {
+      if (nodeReady && !nodeStarting) {
+        bridge = Bridge()
+        nodeReady = false
+      }
+    }
+  }
+
+  private fun startInteractiveNodeIfNeeded() {
+    synchronized(nodeLock) {
+      if (nodeStarting || nodeReady) return
+      nodeStarting = true
+    }
+    worker.execute {
+      try {
+        bridge.start("", stateDirectory().absolutePath, "jagentchill-mobile", "")
+        synchronized(nodeLock) {
+          nodeStarting = false
+          nodeReady = true
+        }
+      } catch (_: Throwable) {
+        synchronized(nodeLock) {
+          nodeStarting = false
+          nodeReady = false
+        }
+        loginInFlight.set(false)
+      }
+    }
+  }
+
+  private fun openBrowser(authUrl: String) {
+    val context = appContext.reactContext?.applicationContext ?: return
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(authUrl)).apply {
+      addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    }
+    // The login worker is deliberately off the Expo call thread. Dispatch the
+    // actual Activity launch to Android's main looper so the system browser
+    // opens reliably on cold starts as well as after a failed attempt.
+    Handler(Looper.getMainLooper()).post {
+      runCatching { context.startActivity(intent) }
+    }
+  }
+
+  private fun stateDirectory(): File {
+    val directory = File(appContext.reactContext?.filesDir ?: throw IllegalStateException("Application context unavailable"), "JAgentChill/Tailscale")
+    if (!directory.exists() && !directory.mkdirs()) {
+      throw IllegalStateException("Unable to create Tailscale state directory")
+    }
+    return directory
+  }
+
+  private companion object {
+    const val AUTHENTICATED_MARKER = "tailscale-authenticated.marker"
+  }
+
+  private fun markAuthenticated() {
+    val marker = File(stateDirectory(), AUTHENTICATED_MARKER)
+    if (!marker.exists()) {
+      marker.writeBytes(byteArrayOf(0x4a, 0x44, 0x54, 0x53))
+    }
+  }
+
+  private fun removeAuthenticatedMarker() {
+    File(stateDirectory(), AUTHENTICATED_MARKER).delete()
+  }
+}

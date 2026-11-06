@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Open navigation
+- tapOn: Menu
+- tapOn:
+    id: nav-sessions
+- waitForAnimationToEnd
+- assertVisible: Sessions
+- assertVisible:
+    id: sessions-list
+- assertVisible:
+    id: sessions-filters-open
+- assertVisible: W9 seeded chat cards

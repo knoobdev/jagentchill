@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Providers
+- assertVisible: Anthropic
+- assertVisible: OpenAI
+- scroll
+- assertVisible: Apple Foundation Models

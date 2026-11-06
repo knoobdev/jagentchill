@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: "6%, 8%"
+- waitForAnimationToEnd
+- takeScreenshot: .dev/shots/w9-w9m2/drawer-point.png
+- assertVisible: Sessions

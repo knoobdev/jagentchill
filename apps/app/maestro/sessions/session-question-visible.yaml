@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Dismiss
+    optional: true
+- waitForAnimationToEnd
+- assertVisible: Which aspect ratio should I use?
+- assertVisible: Ask or guide the agent...
+- takeScreenshot: session-question-visible.png

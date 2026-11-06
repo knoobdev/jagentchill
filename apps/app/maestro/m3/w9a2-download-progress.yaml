@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: host-export-download
+- assertVisible:
+    id: host-export-download-progress
+- assertVisible: Downloaded

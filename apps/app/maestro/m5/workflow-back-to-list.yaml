@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: "50%, 28%"
+    end: "50%, 70%"
+    duration: 600
+- assertVisible: { id: wf-canvas }
+- assertVisible: "Back, Workflows"
+- tapOn: "Back, Workflows"
+- assertVisible: { id: workflow-new }
+- assertVisible: "Search workflows"

@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Usage and limits
+- assertVisible: Estimated spend
+- assertVisible: LLM tokens
+- assertVisible: Tokens per day

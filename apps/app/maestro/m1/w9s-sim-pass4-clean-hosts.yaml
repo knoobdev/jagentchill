@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: { point: "42%, 10%" }
+- assertVisible: Hosts
+- tapOn: { id: host-disconnect-266ea7422643b41846d1e2886351ea37 }
+- assertVisible: { text: "Disconnect from JAgentChill" }
+- tapOn: { text: "Disconnect", index: 1 }
+- waitForAnimationToEnd
+- assertNotVisible: { id: host-disconnect-266ea7422643b41846d1e2886351ea37 }
+- tapOn: { id: host-disconnect-ecc7e13bf0d7929fcb48d867594a4f68 }
+- assertVisible: { text: "Disconnect from JAgentChill" }
+- tapOn: { text: "Disconnect", index: 1 }
+- waitForAnimationToEnd
+- assertNotVisible: { id: host-disconnect-ecc7e13bf0d7929fcb48d867594a4f68 }

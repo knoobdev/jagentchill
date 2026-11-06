@@ -1,0 +1,91 @@
+{
+  "author": "JAgentChill project",
+  "license": "CC0-1.0",
+  "note": "Drawn and encoded by packages/content/scripts/make-demo-media.mjs. Used only to render the covers and previews of the bundled templates.",
+  "width": 1280,
+  "height": 720,
+  "items": [
+    {
+      "id": "sky-morning",
+      "description": "morning sky, blue to peach, with drifting cumulus clouds",
+      "still": "sky-morning.jpg",
+      "clip": "sky-morning.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "hills-sunset",
+      "description": "sun low over five hazy ridges, purple to orange sky",
+      "still": "hills-sunset.jpg",
+      "clip": "hills-sunset.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "ocean-day",
+      "description": "open sea to the horizon under a pale sky, with swell and glitter",
+      "still": "ocean-day.jpg",
+      "clip": "ocean-day.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "bokeh-gold",
+      "description": "out-of-focus golden lights drifting on a dark warm ground",
+      "still": "bokeh-gold.jpg",
+      "clip": "bokeh-gold.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "street-night",
+      "description": "out-of-focus street lights passing at night, reflected on a wet road",
+      "still": "street-night.jpg",
+      "clip": "street-night.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "city-dusk",
+      "description": "city skyline at dusk in three layers, lit windows, slow pan",
+      "still": "city-dusk.jpg",
+      "clip": "city-dusk.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "forest-light",
+      "description": "sun rays through blurred foliage and trunks, floating dust",
+      "still": "forest-light.jpg",
+      "clip": "forest-light.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "studio-product",
+      "description": "a glass bottle and a sphere on a pedestal in a peach studio set, slow push-in",
+      "still": "studio-product.jpg",
+      "clip": "studio-product.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "light-leak",
+      "description": "orange and magenta film light leaks moving over black",
+      "still": "light-leak.jpg",
+      "clip": "light-leak.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "confetti-party",
+      "description": "confetti falling in front of violet party lights",
+      "still": "confetti-party.jpg",
+      "clip": "confetti-party.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "pastel-wash",
+      "description": "slowly moving pastel colour washes",
+      "still": "pastel-wash.jpg",
+      "clip": "pastel-wash.mp4",
+      "seconds": 6
+    },
+    {
+      "id": "paper",
+      "description": "cream paper with fibres and grain",
+      "still": "paper.jpg"
+    }
+  ]
+}

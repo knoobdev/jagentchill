@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: "10%,55%"
+    end: "92%,84%"
+    duration: 900
+- waitForAnimationToEnd

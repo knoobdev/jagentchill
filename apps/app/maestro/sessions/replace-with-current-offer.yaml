@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-link-input
+- tapOn:
+    point: "54%,25%"
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- tapOn: Continue
+- assertVisible: Verification code

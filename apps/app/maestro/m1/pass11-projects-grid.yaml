@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- tapOn: Menu
+- assertVisible:
+    id: nav-projects
+- tapOn:
+    id: nav-projects
+- assertNotVisible:
+    id: drawer
+- assertVisible:
+    id: projects-sort-filter
+- assertVisible: Recent projects
+- assertVisible: Actions for New project

@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Cancel
+- waitForAnimationToEnd
+- tapOn:
+    id: compact-close
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: home-page

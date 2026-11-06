@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: "Video clip, clip-a.mp4, starts at 00:00:00:00, duration 00:00:06:00"
+- swipe:
+    start: 30%,65%
+    end: 55%,65%
+    duration: 8000
+- waitForAnimationToEnd
+- assertVisible: "Video clip, clip-b.mp4, starts at 00:00:00:00, duration 00:00:05:20"
+- assertVisible: "Video clip, clip-b.mp4, starts at 00:00:05:20, duration 00:00:00:22"
+- assertVisible: "Video clip, clip-a.mp4, starts at 00:00:06:12, duration 00:00:06:00, selected"

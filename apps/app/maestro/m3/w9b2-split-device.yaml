@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: compact-time
+    text: "00:12 / 00:16"
+- tapOn:
+    point: 55%,65%
+- assertVisible:
+    id: tool-clip.split
+- tapOn:
+    id: tool-clip.split
+- assertVisible:
+    id: compact-time
+    text: "00:12 / 00:16"

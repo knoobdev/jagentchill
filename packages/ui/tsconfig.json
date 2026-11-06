@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strict": true, "noEmit": true, "allowImportingTsExtensions": true, "jsx": "react-jsx", "module": "esnext", "moduleResolution": "bundler",
+    "target": "es2023", "lib": ["es2023", "dom", "dom.iterable"], "skipLibCheck": true, "noUncheckedIndexedAccess": true, "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src", "test", "scripts", "vitest.config.ts"]
+}

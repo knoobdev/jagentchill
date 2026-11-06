@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: 65%,60%
+    end: 50%,60%
+    duration: 2200
+- assertVisible:
+    id: tool-clip.split

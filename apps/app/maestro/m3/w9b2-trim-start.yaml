@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: "Video clip, clip-b.mp4, starts at 00:00:06:00, duration 00:00:05:29, selected"
+- swipe:
+    start: 65%,65%
+    end: 69%,65%
+    duration: 300
+- waitForAnimationToEnd
+- assertNotVisible: "Video clip, clip-b.mp4, starts at 00:00:06:00, duration 00:00:05:29, selected"

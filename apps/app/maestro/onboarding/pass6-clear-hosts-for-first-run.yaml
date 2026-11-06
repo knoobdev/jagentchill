@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+# The onboarding reshoot starts from an existing devclient. Remove only the saved hosts shown in the Hosts sheet.
+- tapOn:
+    id: host-disconnect-661f14b3c63b18832be60bab243c30ef
+- assertVisible: Disconnect from JAgentChill
+- tapOn: Disconnect
+- tapOn:
+    id: host-disconnect-7e4f68aae2665f35fc4a5d2d05c7f6aa
+- assertVisible: Disconnect from JAgentChill
+- tapOn: Disconnect
+- assertVisible: Connect your computer to get started
+- assertVisible: Scan QR code
+- assertVisible: Paste pairing link

@@ -1,0 +1,26 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: home-open-composer
+- tapOn:
+    id: home-open-composer
+- assertVisible:
+    id: modal
+- assertVisible:
+    id: composer-attach
+- assertVisible:
+    id: composer-pill-model
+- assertVisible:
+    id: composer-overflow
+- assertVisible:
+    id: context-meter
+- assertVisible:
+    id: composer-dictate
+- assertVisible:
+    id: composer-send
+- inputText: Plan a vertical teaser
+- assertVisible:
+    id: composer-attach
+- assertVisible:
+    id: composer-send
+- takeScreenshot: .dev/shots/w9-m1/home-composer-keyboard.png

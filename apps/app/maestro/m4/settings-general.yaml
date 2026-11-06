@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { id: footer-settings }
+- tapOn: Preferences
+- assertVisible: Theme
+- assertVisible: Language

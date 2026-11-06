@@ -1,0 +1,22 @@
+appId: dev.jagentchill.devclient
+---
+# Start with one local project named New project in the phone project list.
+- tapOn: Open navigation
+- tapOn:
+    id: nav-projects
+- assertNotVisible:
+    id: drawer
+- assertVisible:
+    id: projects-sort-filter
+- tapOn:
+    text: Actions for New project
+- assertVisible:
+    id: menu-open
+- assertVisible:
+    id: menu-pin
+- assertVisible:
+    id: menu-rename
+- assertVisible:
+    id: menu-duplicate
+- assertVisible:
+    id: menu-delete

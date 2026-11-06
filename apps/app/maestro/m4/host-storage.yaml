@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Settings
+- tapOn: Storage on host
+- assertVisible: Storage on host
+- assertVisible: Projects
+- assertVisible: Sync activity

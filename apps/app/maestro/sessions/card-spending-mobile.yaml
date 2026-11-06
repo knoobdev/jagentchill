@@ -1,0 +1,11 @@
+appId: dev.jagentchill.devclient
+---
+# Run on a session fixture with a pending provider message-cost card.
+- assertVisible:
+    id: message-cost-card
+- assertVisible:
+    id: message-cost-total
+- assertVisible:
+    id: message-cost-allow
+- assertVisible:
+    id: message-cost-deny

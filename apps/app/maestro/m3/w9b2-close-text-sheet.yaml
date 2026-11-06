@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- pressKey: Enter
+- tapOn:
+    id: tool-sheet-close
+- assertNotVisible:
+    id: tool-sheet-close
+- assertVisible:
+    id: compact-timeline

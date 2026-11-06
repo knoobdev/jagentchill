@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-verification-code
+- inputText: "657491"
+- waitForAnimationToEnd
+- assertVisible: JAgentChill
+- assertVisible:
+    id: home-composer-dock

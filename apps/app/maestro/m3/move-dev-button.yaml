@@ -1,0 +1,8 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 91%,47%
+- swipe:
+    start: 90%, 12%
+    end: 52%, 18%
+    duration: 900

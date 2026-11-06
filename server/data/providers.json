@@ -1,0 +1,1455 @@
+{
+ "counts": {
+  "manifests": 60,
+  "choices": 95,
+  "groups": 57
+ },
+ "providers": [
+  {
+   "providerId": "ai-gateway",
+   "label": "Vercel AI Gateway",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "vercel-ai-gateway"
+   ],
+   "choices": [
+    {
+     "choiceId": "ai-gateway-api-key",
+     "provider": "vercel-ai-gateway",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Vercel AI Gateway API key"
+    }
+   ]
+  },
+  {
+   "providerId": "alibaba",
+   "label": "Alibaba Model Studio",
+   "description": "DashScope / Model Studio API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "alibaba"
+   ],
+   "choices": [
+    {
+     "choiceId": "alibaba-model-studio-api-key",
+     "provider": "alibaba",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Alibaba Model Studio API key"
+    }
+   ]
+  },
+  {
+   "providerId": "amazon-bedrock",
+   "label": "Amazon Bedrock",
+   "description": "Uses the cloud credentials configured on the host.",
+   "docsUrl": "",
+   "pluginIds": [
+    "amazon-bedrock"
+   ],
+   "choices": [
+    {
+     "choiceId": "cloud-credentials",
+     "provider": "amazon-bedrock",
+     "method": "cloud-credentials",
+     "kind": "cloud-credentials",
+     "label": "Cloud credentials on the host"
+    }
+   ]
+  },
+  {
+   "providerId": "amazon-bedrock-mantle",
+   "label": "Amazon Bedrock (Mantle)",
+   "description": "Uses the cloud credentials configured on the host.",
+   "docsUrl": "",
+   "pluginIds": [
+    "amazon-bedrock-mantle"
+   ],
+   "choices": [
+    {
+     "choiceId": "cloud-credentials",
+     "provider": "amazon-bedrock-mantle",
+     "method": "cloud-credentials",
+     "kind": "cloud-credentials",
+     "label": "Cloud credentials on the host"
+    }
+   ]
+  },
+  {
+   "providerId": "anthropic",
+   "label": "Anthropic",
+   "description": "Claude CLI + API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "anthropic"
+   ],
+   "choices": [
+    {
+     "choiceId": "anthropic-cli",
+     "provider": "anthropic",
+     "method": "cli",
+     "kind": "cli-login",
+     "label": "Anthropic Claude CLI",
+     "hint": "Keep using an existing Claude Code CLI login on this host"
+    },
+    {
+     "choiceId": "setup-token",
+     "provider": "anthropic",
+     "method": "setup-token",
+     "kind": "setup-token",
+     "label": "Anthropic setup-token",
+     "hint": "Token created by running 'claude setup-token' in your terminal"
+    },
+    {
+     "choiceId": "apiKey",
+     "provider": "anthropic",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Anthropic API key"
+    }
+   ]
+  },
+  {
+   "providerId": "anthropic-vertex",
+   "label": "Anthropic on Vertex AI",
+   "description": "Uses the cloud credentials configured on the host.",
+   "docsUrl": "",
+   "pluginIds": [
+    "anthropic-vertex"
+   ],
+   "choices": [
+    {
+     "choiceId": "cloud-credentials",
+     "provider": "anthropic-vertex",
+     "method": "cloud-credentials",
+     "kind": "cloud-credentials",
+     "label": "Cloud credentials on the host"
+    }
+   ]
+  },
+  {
+   "providerId": "apple-fm",
+   "label": "Apple Foundation Models",
+   "description": "On-device, no API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "apple-fm"
+   ],
+   "choices": [
+    {
+     "choiceId": "apple-fm",
+     "provider": "apple-fm",
+     "method": "local",
+     "kind": "local",
+     "label": "Apple Foundation Models (on-device)",
+     "hint": "Free on-device setup and utility tasks; choose a separate model for your agent"
+    }
+   ]
+  },
+  {
+   "providerId": "arcee",
+   "label": "Arcee AI",
+   "description": "Direct API or OpenRouter",
+   "docsUrl": "",
+   "pluginIds": [
+    "arcee"
+   ],
+   "choices": [
+    {
+     "choiceId": "arceeai-api-key",
+     "provider": "arcee",
+     "method": "arcee-platform",
+     "kind": "api-key",
+     "label": "Arcee AI API key",
+     "hint": "Direct (chat.arcee.ai)"
+    },
+    {
+     "choiceId": "arceeai-openrouter",
+     "provider": "arcee",
+     "method": "openrouter",
+     "kind": "api-key",
+     "label": "OpenRouter API key",
+     "hint": "Via OpenRouter (openrouter.ai)"
+    }
+   ]
+  },
+  {
+   "providerId": "azure-openai-responses",
+   "label": "Azure OpenAI",
+   "description": "Uses the cloud credentials configured on the host.",
+   "docsUrl": "",
+   "pluginIds": [
+    "azure-openai-responses"
+   ],
+   "choices": [
+    {
+     "choiceId": "cloud-credentials",
+     "provider": "azure-openai-responses",
+     "method": "cloud-credentials",
+     "kind": "cloud-credentials",
+     "label": "Cloud credentials on the host"
+    }
+   ]
+  },
+  {
+   "providerId": "baseten",
+   "label": "Baseten",
+   "description": "Hosted Model APIs, including Inkling",
+   "docsUrl": "",
+   "pluginIds": [
+    "baseten"
+   ],
+   "choices": [
+    {
+     "choiceId": "baseten-api-key",
+     "provider": "baseten",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Baseten API key"
+    }
+   ]
+  },
+  {
+   "providerId": "byteplus",
+   "label": "BytePlus",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "byteplus"
+   ],
+   "choices": [
+    {
+     "choiceId": "byteplus-api-key",
+     "provider": "byteplus",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "BytePlus API key"
+    }
+   ]
+  },
+  {
+   "providerId": "cerebras",
+   "label": "Cerebras",
+   "description": "Fast OpenAI-compatible inference",
+   "docsUrl": "",
+   "pluginIds": [
+    "cerebras"
+   ],
+   "choices": [
+    {
+     "choiceId": "cerebras-api-key",
+     "provider": "cerebras",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Cerebras API key"
+    }
+   ]
+  },
+  {
+   "providerId": "chutes",
+   "label": "Chutes",
+   "description": "OAuth + API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "chutes"
+   ],
+   "choices": [
+    {
+     "choiceId": "chutes",
+     "provider": "chutes",
+     "method": "oauth",
+     "kind": "oauth",
+     "label": "Chutes (OAuth)",
+     "hint": "Browser sign-in"
+    },
+    {
+     "choiceId": "chutes-api-key",
+     "provider": "chutes",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Chutes API key",
+     "hint": "Open-source models including Llama, DeepSeek, and more"
+    }
+   ]
+  },
+  {
+   "providerId": "clawrouter",
+   "label": "ClawRouter",
+   "description": "Managed model access and quotas",
+   "docsUrl": "",
+   "pluginIds": [
+    "clawrouter"
+   ],
+   "choices": [
+    {
+     "choiceId": "clawrouter-api-key",
+     "provider": "clawrouter",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "ClawRouter proxy key",
+     "hint": "Approved models through one managed key"
+    }
+   ]
+  },
+  {
+   "providerId": "cloudflare-ai-gateway",
+   "label": "Cloudflare AI Gateway",
+   "description": "Account ID + Gateway ID + API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "cloudflare-ai-gateway"
+   ],
+   "choices": [
+    {
+     "choiceId": "cloudflare-ai-gateway-api-key",
+     "provider": "cloudflare-ai-gateway",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Cloudflare AI Gateway",
+     "hint": "Account ID + Gateway ID + API key"
+    }
+   ]
+  },
+  {
+   "providerId": "cohere",
+   "label": "Cohere",
+   "description": "OpenAI-compatible inference",
+   "docsUrl": "",
+   "pluginIds": [
+    "cohere"
+   ],
+   "choices": [
+    {
+     "choiceId": "cohere-api-key",
+     "provider": "cohere",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Cohere API key"
+    }
+   ]
+  },
+  {
+   "providerId": "comfy",
+   "label": "ComfyUI",
+   "description": "Local or cloud workflows",
+   "docsUrl": "",
+   "pluginIds": [
+    "comfy"
+   ],
+   "choices": [
+    {
+     "choiceId": "comfy-cloud-api-key",
+     "provider": "comfy",
+     "method": "cloud-api-key",
+     "kind": "api-key",
+     "label": "Comfy Cloud API key",
+     "hint": "Required for cloud workflows"
+    }
+   ]
+  },
+  {
+   "providerId": "copilot",
+   "label": "Copilot",
+   "description": "GitHub, GitHub Enterprise + Local Proxy",
+   "docsUrl": "",
+   "pluginIds": [
+    "copilot-proxy",
+    "github-copilot"
+   ],
+   "choices": [
+    {
+     "choiceId": "copilot-proxy",
+     "provider": "copilot-proxy",
+     "method": "local",
+     "kind": "local",
+     "label": "Copilot Proxy",
+     "hint": "Configure base URL + model ids"
+    },
+    {
+     "choiceId": "github-copilot",
+     "provider": "github-copilot",
+     "method": "device",
+     "kind": "device-code",
+     "label": "GitHub Copilot",
+     "hint": "Device login with your GitHub account"
+    },
+    {
+     "choiceId": "github-copilot-enterprise",
+     "provider": "github-copilot",
+     "method": "device-enterprise",
+     "kind": "device-code",
+     "label": "GitHub Copilot (Enterprise / data residency)",
+     "hint": "Device login against your GitHub Enterprise (*.ghe.com) tenant"
+    }
+   ]
+  },
+  {
+   "providerId": "deepinfra",
+   "label": "DeepInfra",
+   "description": "Unified API for open source models",
+   "docsUrl": "",
+   "pluginIds": [
+    "deepinfra"
+   ],
+   "choices": [
+    {
+     "choiceId": "deepinfra-api-key",
+     "provider": "deepinfra",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "DeepInfra API key",
+     "hint": "Unified API for open source models"
+    }
+   ]
+  },
+  {
+   "providerId": "deepseek",
+   "label": "DeepSeek",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "deepseek"
+   ],
+   "choices": [
+    {
+     "choiceId": "deepseek-api-key",
+     "provider": "deepseek",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "DeepSeek API key"
+    }
+   ]
+  },
+  {
+   "providerId": "fal",
+   "label": "fal",
+   "description": "Image, video, and music generation",
+   "docsUrl": "",
+   "pluginIds": [
+    "fal"
+   ],
+   "choices": [
+    {
+     "choiceId": "fal-api-key",
+     "provider": "fal",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "fal API key"
+    }
+   ]
+  },
+  {
+   "providerId": "featherless",
+   "label": "Featherless AI",
+   "description": "OpenAI-compatible access to open models",
+   "docsUrl": "",
+   "pluginIds": [
+    "featherless"
+   ],
+   "choices": [
+    {
+     "choiceId": "featherless-api-key",
+     "provider": "featherless",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Featherless AI API key",
+     "hint": "OpenAI-compatible access to open models"
+    }
+   ]
+  },
+  {
+   "providerId": "fireworks",
+   "label": "Fireworks",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "fireworks"
+   ],
+   "choices": [
+    {
+     "choiceId": "fireworks-api-key",
+     "provider": "fireworks",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Fireworks API key"
+    }
+   ]
+  },
+  {
+   "providerId": "gmi",
+   "label": "GMI Cloud",
+   "description": "OpenAI-compatible GMI Cloud endpoint",
+   "docsUrl": "",
+   "pluginIds": [
+    "gmi"
+   ],
+   "choices": [
+    {
+     "choiceId": "gmi-api-key",
+     "provider": "gmi",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "GMI Cloud API key",
+     "hint": "OpenAI-compatible GMI Cloud endpoint"
+    }
+   ]
+  },
+  {
+   "providerId": "google",
+   "label": "Google",
+   "description": "Supported API-key setup",
+   "docsUrl": "",
+   "pluginIds": [
+    "google"
+   ],
+   "choices": [
+    {
+     "choiceId": "gemini-api-key",
+     "provider": "google",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Google AI Studio API key",
+     "hint": "Supported API-key access from aistudio.google.com/apikey"
+    }
+   ]
+  },
+  {
+   "providerId": "google-vertex",
+   "label": "Google Vertex AI",
+   "description": "Uses the cloud credentials configured on the host.",
+   "docsUrl": "",
+   "pluginIds": [
+    "google-vertex"
+   ],
+   "choices": [
+    {
+     "choiceId": "cloud-credentials",
+     "provider": "google-vertex",
+     "method": "cloud-credentials",
+     "kind": "cloud-credentials",
+     "label": "Cloud credentials on the host"
+    }
+   ]
+  },
+  {
+   "providerId": "groq",
+   "label": "Groq",
+   "description": "",
+   "docsUrl": "",
+   "pluginIds": [
+    "groq"
+   ],
+   "choices": [
+    {
+     "choiceId": "groq-api-key",
+     "provider": "groq",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Groq API key",
+     "hint": "Fast OpenAI-compatible inference"
+    }
+   ]
+  },
+  {
+   "providerId": "huggingface",
+   "label": "Hugging Face",
+   "description": "Inference API (HF token)",
+   "docsUrl": "",
+   "pluginIds": [
+    "huggingface"
+   ],
+   "choices": [
+    {
+     "choiceId": "huggingface-api-key",
+     "provider": "huggingface",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Hugging Face API key",
+     "hint": "Inference API (HF token)"
+    }
+   ]
+  },
+  {
+   "providerId": "kie",
+   "label": "Kie AI",
+   "description": "Video generation",
+   "docsUrl": "",
+   "pluginIds": [
+    "kie"
+   ],
+   "choices": [
+    {
+     "choiceId": "kie-api-key",
+     "provider": "kie",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Kie AI API key"
+    }
+   ]
+  },
+  {
+   "providerId": "kilocode",
+   "label": "Kilo Gateway",
+   "description": "API key (OpenRouter-compatible)",
+   "docsUrl": "",
+   "pluginIds": [
+    "kilocode"
+   ],
+   "choices": [
+    {
+     "choiceId": "kilocode-api-key",
+     "provider": "kilocode",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Kilo Gateway API key",
+     "hint": "API key (OpenRouter-compatible)"
+    }
+   ]
+  },
+  {
+   "providerId": "litellm",
+   "label": "LiteLLM",
+   "description": "Unified LLM gateway (100+ providers)",
+   "docsUrl": "",
+   "pluginIds": [
+    "litellm"
+   ],
+   "choices": [
+    {
+     "choiceId": "litellm-api-key",
+     "provider": "litellm",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "LiteLLM API key",
+     "hint": "Unified gateway for 100+ LLM providers"
+    }
+   ]
+  },
+  {
+   "providerId": "llama-cpp",
+   "label": "Local llama.cpp",
+   "description": "Managed or external llama.cpp server",
+   "docsUrl": "",
+   "pluginIds": [
+    "llama-cpp"
+   ],
+   "choices": [
+    {
+     "choiceId": "llama-cpp",
+     "provider": "llama-cpp",
+     "method": "local",
+     "kind": "local",
+     "label": "Managed local server",
+     "hint": "Choose a Qwen, Gemma, or Muse model for this Gateway's hardware and install llama.cpp"
+    },
+    {
+     "choiceId": "llama-cpp-existing-server",
+     "provider": "llama-cpp",
+     "method": "existing-server",
+     "kind": "local",
+     "label": "Existing llama-server",
+     "hint": "Connect to a llama.cpp server managed outside the host"
+    }
+   ]
+  },
+  {
+   "providerId": "lmstudio",
+   "label": "LM Studio",
+   "description": "Self-hosted open-weight models",
+   "docsUrl": "",
+   "pluginIds": [
+    "lmstudio"
+   ],
+   "choices": [
+    {
+     "choiceId": "lmstudio",
+     "provider": "lmstudio",
+     "method": "custom",
+     "kind": "custom-endpoint",
+     "label": "LM Studio",
+     "hint": "Connect to a running LM Studio server and use an already loaded model"
+    }
+   ]
+  },
+  {
+   "providerId": "longcat",
+   "label": "LongCat",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "longcat"
+   ],
+   "choices": [
+    {
+     "choiceId": "longcat-api-key",
+     "provider": "longcat",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "LongCat API key"
+    }
+   ]
+  },
+  {
+   "providerId": "meta",
+   "label": "Meta",
+   "description": "Meta (Responses API)",
+   "docsUrl": "",
+   "pluginIds": [
+    "meta"
+   ],
+   "choices": [
+    {
+     "choiceId": "meta-api-key",
+     "provider": "meta",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Meta API key",
+     "hint": "Meta (Responses API)"
+    }
+   ]
+  },
+  {
+   "providerId": "microsoft-foundry",
+   "label": "Microsoft Foundry",
+   "description": "Entra ID + API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "microsoft-foundry"
+   ],
+   "choices": [
+    {
+     "choiceId": "microsoft-foundry-entra",
+     "provider": "microsoft-foundry",
+     "method": "entra-id",
+     "kind": "oauth",
+     "label": "Microsoft Foundry (Entra ID / az login)",
+     "hint": "Use your Azure login — no API key needed"
+    },
+    {
+     "choiceId": "microsoft-foundry-apikey",
+     "provider": "microsoft-foundry",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Microsoft Foundry (API key)",
+     "hint": "Use an Azure OpenAI API key directly"
+    }
+   ]
+  },
+  {
+   "providerId": "minimax",
+   "label": "MiniMax",
+   "description": "M3 (recommended)",
+   "docsUrl": "",
+   "pluginIds": [
+    "minimax"
+   ],
+   "choices": [
+    {
+     "choiceId": "minimax-global-oauth",
+     "provider": "minimax-portal",
+     "method": "oauth",
+     "kind": "oauth",
+     "label": "MiniMax OAuth (Global)",
+     "hint": "Global endpoint - api.minimax.io"
+    },
+    {
+     "choiceId": "minimax-global-api",
+     "provider": "minimax",
+     "method": "api-global",
+     "kind": "api-key",
+     "label": "MiniMax API key (Global)",
+     "hint": "Global endpoint - api.minimax.io"
+    },
+    {
+     "choiceId": "minimax-cn-oauth",
+     "provider": "minimax-portal",
+     "method": "oauth-cn",
+     "kind": "oauth",
+     "label": "MiniMax OAuth (CN)",
+     "hint": "CN endpoint - api.minimaxi.com"
+    },
+    {
+     "choiceId": "minimax-cn-api",
+     "provider": "minimax",
+     "method": "api-cn",
+     "kind": "api-key",
+     "label": "MiniMax API key (CN)",
+     "hint": "CN endpoint - api.minimaxi.com"
+    }
+   ]
+  },
+  {
+   "providerId": "mistral",
+   "label": "Mistral AI",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "mistral"
+   ],
+   "choices": [
+    {
+     "choiceId": "mistral-api-key",
+     "provider": "mistral",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Mistral API key"
+    }
+   ]
+  },
+  {
+   "providerId": "moonshot",
+   "label": "Moonshot AI (Kimi)",
+   "description": "Kimi Code membership · https://www.kimi.com/membership/pricing",
+   "docsUrl": "",
+   "pluginIds": [
+    "kimi",
+    "moonshot"
+   ],
+   "choices": [
+    {
+     "choiceId": "kimi-code-api-key",
+     "provider": "kimi",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Kimi Code API key (subscription)"
+    },
+    {
+     "choiceId": "moonshot-api-key",
+     "provider": "moonshot",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Moonshot API key (.ai)"
+    },
+    {
+     "choiceId": "moonshot-api-key-cn",
+     "provider": "moonshot",
+     "method": "api-key-cn",
+     "kind": "api-key",
+     "label": "Moonshot API key (.cn)"
+    }
+   ]
+  },
+  {
+   "providerId": "novita",
+   "label": "NovitaAI",
+   "description": "OpenAI-compatible NovitaAI endpoint",
+   "docsUrl": "",
+   "pluginIds": [
+    "novita"
+   ],
+   "choices": [
+    {
+     "choiceId": "novita-api-key",
+     "provider": "novita",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "NovitaAI API key",
+     "hint": "OpenAI-compatible NovitaAI endpoint"
+    }
+   ]
+  },
+  {
+   "providerId": "nvidia",
+   "label": "NVIDIA",
+   "description": "Direct API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "nvidia"
+   ],
+   "choices": [
+    {
+     "choiceId": "nvidia-api-key",
+     "provider": "nvidia",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "NVIDIA API key"
+    }
+   ]
+  },
+  {
+   "providerId": "ollama",
+   "label": "Ollama",
+   "description": "Cloud and local open models",
+   "docsUrl": "",
+   "pluginIds": [
+    "ollama"
+   ],
+   "choices": [
+    {
+     "choiceId": "ollama",
+     "provider": "ollama",
+     "method": "local",
+     "kind": "local",
+     "label": "Ollama",
+     "hint": "Connect to an Ollama server and select a cloud or local model"
+    },
+    {
+     "choiceId": "ollama-cloud",
+     "provider": "ollama-cloud",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Ollama Cloud",
+     "hint": "Hosted models via ollama.com"
+    }
+   ]
+  },
+  {
+   "providerId": "openai",
+   "label": "OpenAI",
+   "description": "Codex login, Sign in with ChatGPT (Beta), or API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "openai"
+   ],
+   "choices": [
+    {
+     "choiceId": "openai",
+     "provider": "openai",
+     "method": "oauth",
+     "kind": "oauth",
+     "label": "Codex login (browser)",
+     "hint": "Sign in to Codex locally with your ChatGPT account"
+    },
+    {
+     "choiceId": "openai-device-code",
+     "provider": "openai",
+     "method": "device-code",
+     "kind": "device-code",
+     "label": "Codex login (device code)",
+     "hint": "Use a browser code when the host runs on a remote VM"
+    },
+    {
+     "choiceId": "openai-token-sharing",
+     "provider": "openai",
+     "method": "siwc",
+     "kind": "cli-login",
+     "label": "Sign in with ChatGPT (Beta)",
+     "hint": "Authorize the host for eligible Responses models using your Codex allowance"
+    },
+    {
+     "choiceId": "openai-api-key",
+     "provider": "openai",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "OpenAI API Key",
+     "hint": "Use your OpenAI API key directly"
+    }
+   ]
+  },
+  {
+   "providerId": "opencode",
+   "label": "OpenCode",
+   "description": "Shared API key infrastructure for Zen + Go",
+   "docsUrl": "",
+   "pluginIds": [
+    "opencode",
+    "opencode-go"
+   ],
+   "choices": [
+    {
+     "choiceId": "opencode-zen",
+     "provider": "opencode",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "OpenCode Zen catalog"
+    },
+    {
+     "choiceId": "opencode-go",
+     "provider": "opencode-go",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "OpenCode Go catalog"
+    }
+   ]
+  },
+  {
+   "providerId": "openrouter",
+   "label": "OpenRouter",
+   "description": "OAuth or API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "openrouter"
+   ],
+   "choices": [
+    {
+     "choiceId": "openrouter-api-key",
+     "provider": "openrouter",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "OpenRouter API key"
+    },
+    {
+     "choiceId": "openrouter-oauth",
+     "provider": "openrouter",
+     "method": "oauth",
+     "kind": "oauth",
+     "label": "OpenRouter OAuth",
+     "hint": "Browser sign-in"
+    }
+   ]
+  },
+  {
+   "providerId": "pixverse",
+   "label": "PixVerse",
+   "description": "Video generation",
+   "docsUrl": "",
+   "pluginIds": [
+    "pixverse"
+   ],
+   "choices": [
+    {
+     "choiceId": "pixverse-api-key",
+     "provider": "pixverse",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "PixVerse API key",
+     "hint": "Wizard prompts for International or CN endpoint."
+    }
+   ]
+  },
+  {
+   "providerId": "qianfan",
+   "label": "Qianfan",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "qianfan"
+   ],
+   "choices": [
+    {
+     "choiceId": "qianfan-api-key",
+     "provider": "qianfan",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Qianfan API key"
+    }
+   ]
+  },
+  {
+   "providerId": "qwen",
+   "label": "Qwen Cloud",
+   "description": "Standard / Coding Plan (CN / Global) + multimodal roadmap",
+   "docsUrl": "",
+   "pluginIds": [
+    "qwen"
+   ],
+   "choices": [
+    {
+     "choiceId": "qwen-standard-api-key-cn",
+     "provider": "qwen",
+     "method": "standard-api-key-cn",
+     "kind": "api-key",
+     "label": "Standard API Key for China (pay-as-you-go)",
+     "hint": "Endpoint: dashscope.aliyuncs.com"
+    },
+    {
+     "choiceId": "qwen-standard-api-key",
+     "provider": "qwen",
+     "method": "standard-api-key",
+     "kind": "api-key",
+     "label": "Standard API Key for Global/Intl (pay-as-you-go)",
+     "hint": "Endpoint: dashscope-intl.aliyuncs.com"
+    },
+    {
+     "choiceId": "qwen-api-key-cn",
+     "provider": "qwen",
+     "method": "api-key-cn",
+     "kind": "api-key",
+     "label": "Coding Plan API Key for China (subscription)",
+     "hint": "Endpoint: coding.dashscope.aliyuncs.com"
+    },
+    {
+     "choiceId": "qwen-api-key",
+     "provider": "qwen",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Coding Plan API Key for Global/Intl (subscription)",
+     "hint": "Endpoint: coding-intl.dashscope.aliyuncs.com"
+    },
+    {
+     "choiceId": "qwen-token-plan",
+     "provider": "qwen-token-plan",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Qwen Token Plan (Global/Intl)",
+     "hint": "Endpoint: token-plan.ap-southeast-1.maas.aliyuncs.com"
+    },
+    {
+     "choiceId": "qwen-token-plan-cn",
+     "provider": "qwen-token-plan",
+     "method": "api-key-cn",
+     "kind": "api-key",
+     "label": "Qwen Token Plan (China)",
+     "hint": "Endpoint: token-plan.cn-beijing.maas.aliyuncs.com"
+    }
+   ]
+  },
+  {
+   "providerId": "radius",
+   "label": "Radius",
+   "description": "Browser sign-in or API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "radius"
+   ],
+   "choices": [
+    {
+     "choiceId": "radius",
+     "provider": "radius",
+     "method": "oauth",
+     "kind": "oauth",
+     "label": "Radius (browser sign-in)"
+    },
+    {
+     "choiceId": "radius-api-key",
+     "provider": "radius",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Radius API key"
+    }
+   ]
+  },
+  {
+   "providerId": "runway",
+   "label": "Runway",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "runway"
+   ],
+   "choices": [
+    {
+     "choiceId": "runway-api-key",
+     "provider": "runway",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Runway API key"
+    }
+   ]
+  },
+  {
+   "providerId": "sglang",
+   "label": "SGLang",
+   "description": "Fast self-hosted server",
+   "docsUrl": "",
+   "pluginIds": [
+    "sglang"
+   ],
+   "choices": [
+    {
+     "choiceId": "sglang",
+     "provider": "sglang",
+     "method": "custom",
+     "kind": "custom-endpoint",
+     "label": "SGLang",
+     "hint": "Fast self-hosted OpenAI-compatible server"
+    }
+   ]
+  },
+  {
+   "providerId": "stepfun",
+   "label": "StepFun",
+   "description": "Standard / Step Plan (China / Global)",
+   "docsUrl": "",
+   "pluginIds": [
+    "stepfun"
+   ],
+   "choices": [
+    {
+     "choiceId": "stepfun-standard-api-key-cn",
+     "provider": "stepfun",
+     "method": "standard-api-key-cn",
+     "kind": "api-key",
+     "label": "StepFun Standard API key (China)",
+     "hint": "Endpoint: api.stepfun.com/v1"
+    },
+    {
+     "choiceId": "stepfun-standard-api-key-intl",
+     "provider": "stepfun",
+     "method": "standard-api-key-intl",
+     "kind": "api-key",
+     "label": "StepFun Standard API key (Global/Intl)",
+     "hint": "Endpoint: api.stepfun.ai/v1"
+    },
+    {
+     "choiceId": "stepfun-plan-api-key-cn",
+     "provider": "stepfun-plan",
+     "method": "plan-api-key-cn",
+     "kind": "api-key",
+     "label": "StepFun Step Plan API key (China)",
+     "hint": "Endpoint: api.stepfun.com/step_plan/v1"
+    },
+    {
+     "choiceId": "stepfun-plan-api-key-intl",
+     "provider": "stepfun-plan",
+     "method": "plan-api-key-intl",
+     "kind": "api-key",
+     "label": "StepFun Step Plan API key (Global/Intl)",
+     "hint": "Endpoint: api.stepfun.ai/step_plan/v1"
+    }
+   ]
+  },
+  {
+   "providerId": "synthetic",
+   "label": "Synthetic",
+   "description": "Anthropic-compatible (multi-model)",
+   "docsUrl": "",
+   "pluginIds": [
+    "synthetic"
+   ],
+   "choices": [
+    {
+     "choiceId": "synthetic-api-key",
+     "provider": "synthetic",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Synthetic API key"
+    }
+   ]
+  },
+  {
+   "providerId": "tencent",
+   "label": "Tencent Cloud",
+   "description": "Tencent TokenHub",
+   "docsUrl": "",
+   "pluginIds": [
+    "tencent"
+   ],
+   "choices": [
+    {
+     "choiceId": "tokenhub-api-key",
+     "provider": "tencent-tokenhub",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Tencent TokenHub"
+    },
+    {
+     "choiceId": "tokenplan-api-key",
+     "provider": "tencent-tokenplan",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Tencent TokenPlan"
+    }
+   ]
+  },
+  {
+   "providerId": "together",
+   "label": "Together AI",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "together"
+   ],
+   "choices": [
+    {
+     "choiceId": "together-api-key",
+     "provider": "together",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Together AI API key"
+    }
+   ]
+  },
+  {
+   "providerId": "venice",
+   "label": "Venice AI",
+   "description": "Privacy-focused (uncensored models)",
+   "docsUrl": "",
+   "pluginIds": [
+    "venice"
+   ],
+   "choices": [
+    {
+     "choiceId": "venice-api-key",
+     "provider": "venice",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Venice AI API key"
+    }
+   ]
+  },
+  {
+   "providerId": "vllm",
+   "label": "vLLM",
+   "description": "Local/self-hosted OpenAI-compatible",
+   "docsUrl": "",
+   "pluginIds": [
+    "vllm"
+   ],
+   "choices": [
+    {
+     "choiceId": "vllm",
+     "provider": "vllm",
+     "method": "custom",
+     "kind": "custom-endpoint",
+     "label": "vLLM",
+     "hint": "Local/self-hosted OpenAI-compatible server"
+    }
+   ]
+  },
+  {
+   "providerId": "volcengine",
+   "label": "Volcano Engine",
+   "description": "API key",
+   "docsUrl": "",
+   "pluginIds": [
+    "volcengine"
+   ],
+   "choices": [
+    {
+     "choiceId": "volcengine-api-key",
+     "provider": "volcengine",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Volcano Engine API key"
+    }
+   ]
+  },
+  {
+   "providerId": "vydra",
+   "label": "Vydra",
+   "description": "Image, video, and speech",
+   "docsUrl": "",
+   "pluginIds": [
+    "vydra"
+   ],
+   "choices": [
+    {
+     "choiceId": "vydra-api-key",
+     "provider": "vydra",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Vydra API key"
+    }
+   ]
+  },
+  {
+   "providerId": "xai",
+   "label": "xAI (Grok)",
+   "description": "API key or OAuth",
+   "docsUrl": "",
+   "pluginIds": [
+    "xai"
+   ],
+   "choices": [
+    {
+     "choiceId": "xai-api-key",
+     "provider": "xai",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "xAI API key"
+    },
+    {
+     "choiceId": "xai-oauth",
+     "provider": "xai",
+     "method": "oauth",
+     "kind": "oauth",
+     "label": "xAI OAuth",
+     "hint": "Remote-friendly browser sign-in without a localhost callback"
+    },
+    {
+     "choiceId": "xai-device-code",
+     "provider": "xai",
+     "method": "device-code",
+     "kind": "device-code",
+     "label": "xAI device code",
+     "hint": "Compatibility alias for xAI OAuth device-code sign-in"
+    }
+   ]
+  },
+  {
+   "providerId": "xiaomi",
+   "label": "Xiaomi",
+   "description": "Pay-as-you-go / Token Plan",
+   "docsUrl": "",
+   "pluginIds": [
+    "xiaomi"
+   ],
+   "choices": [
+    {
+     "choiceId": "xiaomi-api-key",
+     "provider": "xiaomi",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Xiaomi API key (Pay-as-you-go)"
+    },
+    {
+     "choiceId": "xiaomi-token-plan-ams",
+     "provider": "xiaomi-token-plan",
+     "method": "token-plan-ams",
+     "kind": "api-key",
+     "label": "Xiaomi Token Plan (Europe)",
+     "hint": "Endpoint preset: token-plan-ams.xiaomimimo.com/v1"
+    },
+    {
+     "choiceId": "xiaomi-token-plan-cn",
+     "provider": "xiaomi-token-plan",
+     "method": "token-plan-cn",
+     "kind": "api-key",
+     "label": "Xiaomi Token Plan (China)",
+     "hint": "Endpoint preset: token-plan-cn.xiaomimimo.com/v1"
+    },
+    {
+     "choiceId": "xiaomi-token-plan-sgp",
+     "provider": "xiaomi-token-plan",
+     "method": "token-plan-sgp",
+     "kind": "api-key",
+     "label": "Xiaomi Token Plan (Singapore)",
+     "hint": "Endpoint preset: token-plan-sgp.xiaomimimo.com/v1"
+    }
+   ]
+  },
+  {
+   "providerId": "zai",
+   "label": "Z.AI",
+   "description": "GLM Coding Plan / Global / CN",
+   "docsUrl": "",
+   "pluginIds": [
+    "zai"
+   ],
+   "choices": [
+    {
+     "choiceId": "zai-api-key",
+     "provider": "zai",
+     "method": "api-key",
+     "kind": "api-key",
+     "label": "Z.AI API key"
+    },
+    {
+     "choiceId": "zai-coding-global",
+     "provider": "zai",
+     "method": "coding-global",
+     "kind": "api-key",
+     "label": "Coding-Plan-Global",
+     "hint": "GLM Coding Plan Global (api.z.ai)"
+    },
+    {
+     "choiceId": "zai-coding-cn",
+     "provider": "zai",
+     "method": "coding-cn",
+     "kind": "api-key",
+     "label": "Coding-Plan-CN",
+     "hint": "GLM Coding Plan CN (open.bigmodel.cn)"
+    },
+    {
+     "choiceId": "zai-global",
+     "provider": "zai",
+     "method": "global",
+     "kind": "api-key",
+     "label": "Global",
+     "hint": "Z.AI Global (api.z.ai)"
+    },
+    {
+     "choiceId": "zai-cn",
+     "provider": "zai",
+     "method": "cn",
+     "kind": "api-key",
+     "label": "CN",
+     "hint": "Z.AI CN (open.bigmodel.cn)"
+    }
+   ]
+  }
+ ]
+}

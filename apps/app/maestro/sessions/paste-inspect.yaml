@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-link-paste
+- waitForAnimationToEnd

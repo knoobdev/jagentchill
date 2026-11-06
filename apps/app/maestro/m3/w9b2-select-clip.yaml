@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 70%,65%
+- assertVisible: Transform
+- assertVisible:
+    id: tool-clip.split

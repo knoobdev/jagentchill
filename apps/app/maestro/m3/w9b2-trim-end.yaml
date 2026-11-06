@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: 0.7s
+- swipe:
+    start: 58%,65%
+    end: 63%,65%
+    duration: 300
+- waitForAnimationToEnd
+- assertNotVisible: 0.7s

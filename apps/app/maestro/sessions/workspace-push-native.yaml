@@ -1,0 +1,22 @@
+appId: dev.jagentchill.devclient
+---
+- swipe:
+    start: "10%,57%"
+    end: "8%,5%"
+    duration: 900
+- tapOn: Open workspace
+- waitForAnimationToEnd
+- assertVisible:
+    id: workspace-pane
+- assertVisible:
+    id: workspace-tab-worklog
+- assertNotVisible:
+    id: chat-pane
+- assertVisible:
+    id: workspace-back-to-chat
+- takeScreenshot: workspace-pushed-native.png
+- tapOn:
+    id: workspace-back-to-chat
+- waitForAnimationToEnd
+- assertVisible:
+    id: chat-composer-dock

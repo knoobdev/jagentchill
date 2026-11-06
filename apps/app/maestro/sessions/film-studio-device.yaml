@@ -1,0 +1,21 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Menu
+- waitForAnimationToEnd
+- tapOn: Film Studio
+- waitForAnimationToEnd
+- assertVisible:
+    id: film-new
+- assertVisible: Search films
+- assertVisible:
+    id: film-card
+- tapOn:
+    id: film-card
+- waitForAnimationToEnd
+- assertVisible:
+    id: film-tabs
+- assertVisible:
+    id: film-stage-story
+- assertVisible:
+    id: film-tab-storyboard
+- takeScreenshot: film-studio-device.png

@@ -1,0 +1,16 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "${PAIR_CODE}"
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible: New project
+- assertVisible: Set up models
+- assertVisible:
+    id: home-composer-dock
+- assertVisible:
+    id: composer-attach
+- tapOn: message
+- inputText: Pairing verified
+- assertVisible: Pairing verified
+- hideKeyboard

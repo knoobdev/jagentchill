@@ -1,0 +1,12 @@
+{
+  "name": "@jagentchill/content",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bundled content as data with typed manifests: preset catalogues and baked LUTs. No runtime logic.",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "sync:catalogue": "node scripts/sync-catalogue.ts",
+    "test": "node --test \"test/*.test.ts\""
+  }
+}

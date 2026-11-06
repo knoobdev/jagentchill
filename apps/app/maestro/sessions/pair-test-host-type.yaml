@@ -1,0 +1,12 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-verification-code
+- inputText: "1"
+- inputText: "2"
+- inputText: "4"
+- inputText: "4"
+- inputText: "9"
+- inputText: "2"
+- waitForAnimationToEnd
+- takeScreenshot: pairing-code-filled.png

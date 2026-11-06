@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: bar-undo
+- assertVisible: "Video clip, clip-a.mp4, starts at 00:00:00:00, duration 00:00:06:00"
+- assertVisible: "Video clip, clip-b.mp4, starts at 00:00:06:00, duration 00:00:05:20"

@@ -1,0 +1,47 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: New project
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible:
+    id: compact-editor
+- assertVisible:
+    id: editor-bar
+- assertVisible:
+    id: project-name
+- assertVisible:
+    id: bar-undo
+- assertVisible:
+    id: bar-redo
+- assertVisible:
+    id: open-export
+- assertVisible:
+    id: compact-preview
+- assertVisible:
+    id: transport-row
+- assertVisible:
+    id: compact-time
+- assertVisible:
+    id: transport-fullscreen
+- assertVisible:
+    id: player-play
+- assertVisible:
+    id: compact-timeline-region
+- assertVisible:
+    id: compact-toolbar
+- assertVisible:
+    id: host-preview-label
+- assertVisible: Add media
+- tapOn:
+    text: Add media
+- waitForAnimationToEnd
+- assertVisible:
+    id: media-sheet
+- assertVisible:
+    id: media-import
+- assertVisible:
+    id: media-items
+- tapOn: Device
+- assertVisible: Videos
+- assertVisible: Photos
+- assertVisible: Browse files

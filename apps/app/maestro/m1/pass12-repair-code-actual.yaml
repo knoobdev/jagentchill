@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Paste pairing link
+- tapOn:
+    id: pairing-link-paste
+- tapOn: Continue
+- waitForAnimationToEnd
+- inputText: "165716"
+- waitForAnimationToEnd

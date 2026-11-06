@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Settings
+- scroll
+- assertVisible: Providers
+- tapOn: Providers
+- waitForAnimationToEnd
+- assertVisible: Providers
+- assertVisible: Add provider

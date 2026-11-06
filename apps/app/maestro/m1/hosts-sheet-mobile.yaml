@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: host-switcher
+- assertVisible: Hosts
+- assertVisible:
+    id: host-switcher-list
+- assertVisible: Add a host…
+- assertNotVisible:
+    id: drawer
+- tapOn: Add a host…
+- assertVisible: Add connection
+- assertVisible: Direct connection
+- assertVisible: Paste pairing link

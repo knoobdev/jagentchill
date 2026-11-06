@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible: Pair a device
+- tapOn: Pair a device
+- assertVisible: Pairing QR code
+- assertVisible: Scan the code with JAgentChill on the new device, or use the link.

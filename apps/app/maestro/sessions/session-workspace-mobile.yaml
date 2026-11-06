@@ -1,0 +1,47 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: sessions-box-agent:main:jc:f4cd9b0b-647b-4855-9762-9c41b88e6ed3
+- waitForAnimationToEnd
+- assertVisible:
+    id: session-mobile-header
+- assertVisible:
+    id: session-back
+- assertVisible:
+    id: session-mobile-title
+- assertVisible:
+    id: session-menu
+- assertVisible:
+    id: chat-scroll
+- assertVisible:
+    id: chat-composer-dock
+- takeScreenshot: session-screen-mobile.png
+- tapOn:
+    id: session-menu
+- tapOn:
+    text: Search conversation
+- assertVisible:
+    id: chat-search-input
+- tapOn:
+    text: Close search
+- tapOn:
+    id: session-menu
+- tapOn:
+    text: Open workspace
+- waitForAnimationToEnd
+- assertVisible:
+    id: workspace-pane
+- assertVisible:
+    id: workspace-tab-timeline
+- assertNotVisible:
+    id: chat-pane
+- assertVisible:
+    id: workspace-back-to-chat
+- tapOn:
+    id: workspace-back-to-chat
+- assertVisible:
+    id: chat-composer-dock
+- tapOn:
+    text: Ask or guide the agent…
+- waitForAnimationToEnd
+- takeScreenshot: session-composer-keyboard-mobile.png

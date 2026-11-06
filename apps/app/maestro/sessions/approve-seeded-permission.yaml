@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: permission-allow-once
+- tapOn:
+    id: permission-allow-once
+- waitForAnimationToEnd
+- assertNotVisible:
+    id: permission-allow-once

@@ -1,0 +1,26 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: tool-back
+- swipe:
+    start: 90%, 94%
+    end: 12%, 94%
+    duration: 500
+- swipe:
+    start: 90%, 94%
+    end: 12%, 94%
+    duration: 500
+- tapOn:
+    id: tool-root.ratio
+- assertVisible: Project settings
+- assertVisible:
+    id: ratio-16:9
+- tapOn:
+    id: ratio-16:9
+- assertVisible: Project settings
+- tapOn: Close
+- assertNotVisible: Project settings
+- assertVisible:
+    id: host-preview-label
+- assertVisible:
+    id: compact-timeline

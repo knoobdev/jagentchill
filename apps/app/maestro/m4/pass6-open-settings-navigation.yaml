@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn: Open navigation
+- assertVisible: Settings
+- tapOn: Settings
+- assertVisible: Settings

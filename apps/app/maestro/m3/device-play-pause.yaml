@@ -1,0 +1,6 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: player-play
+- assertVisible:
+    id: player-pause

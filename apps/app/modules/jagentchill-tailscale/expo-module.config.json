@@ -1,0 +1,5 @@
+{
+  "platforms": ["ios", "android"],
+  "ios": { "modules": ["JAgentChillTailscaleModule"] },
+  "android": { "modules": ["sh.jagentchill.tailscale.JAgentChillTailscaleModule"] }
+}

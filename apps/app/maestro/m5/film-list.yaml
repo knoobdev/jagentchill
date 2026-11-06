@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- launchApp
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-film }
+- assertVisible: { id: film-new }
+- assertVisible: "Search films"
+- tapOn: { id: film-new }
+- assertVisible: { id: film-stage-story }
+- tapOn: Open navigation
+- tapOn: { text: Menu, optional: true }
+- tapOn: { id: nav-film }
+- assertVisible: { id: film-card }

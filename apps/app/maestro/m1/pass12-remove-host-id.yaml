@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: host-disconnect-.*
+- waitForAnimationToEnd
+- assertVisible: Disconnect from JAgentChill
+- tapOn: Disconnect
+- waitForAnimationToEnd
+- assertVisible: Hosts

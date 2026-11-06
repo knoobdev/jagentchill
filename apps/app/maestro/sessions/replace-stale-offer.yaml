@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-link-input
+- tapOn: Clear
+- tapOn:
+    id: pairing-link-paste
+- waitForAnimationToEnd
+- takeScreenshot: pairing-link-replaced.png

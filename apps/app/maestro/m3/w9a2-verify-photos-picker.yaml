@@ -1,0 +1,13 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: export-dismiss
+- waitForAnimationToEnd
+- tapOn: Add media
+- assertVisible:
+    id: media-sheet
+- tapOn: Device
+- waitForAnimationToEnd
+- tapOn: Videos
+- waitForAnimationToEnd
+- assertVisible: Albums

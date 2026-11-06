@@ -1,0 +1,26 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: 42%, 10%
+- assertVisible: This device only
+- assertVisible: Add a host…
+- tapOn: Add a host…
+- assertVisible: Add connection
+- tapOn:
+    id: add-connection-method-paste
+- assertVisible: Pairing link
+- assertVisible:
+    id: pairing-link-input
+- assertVisible:
+    id: pairing-link-paste
+- tapOn:
+    id: pairing-link-input
+- inputText: old-link-not-used
+- tapOn:
+    id: pairing-link-paste
+- tapOn:
+    text: Allow Paste
+    optional: true
+- tapOn: Name of this device
+- tapOn: Continue
+- assertVisible: This is not a valid pairing link.

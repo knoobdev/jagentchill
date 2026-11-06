@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: strip-el-8fc3bf71-aafc-45b2-933c-aed635bfc479
+- assertVisible: Edit

@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    point: "91%,48%"
+- waitForAnimationToEnd
+- tapOn:
+    text: Continue
+- waitForAnimationToEnd
+- assertVisible: Verification code

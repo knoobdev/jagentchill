@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: compact-close
+- assertVisible: Projects

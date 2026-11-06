@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "${PAIR_CODE}"
+- tapOn:
+    text: Allow Paste
+    optional: true
+- assertVisible: Pair
+- tapOn: Pair
+- assertVisible: New project
+- assertVisible: JAgentChill
+- assertVisible:
+    id: home-composer-dock
+- assertVisible:
+    id: composer-attach

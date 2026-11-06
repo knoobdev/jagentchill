@@ -1,0 +1,20 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: open-export
+- assertVisible:
+    id: export-dialog
+- assertVisible:
+    id: export-section-video
+- assertVisible:
+    id: export-resolution
+- assertVisible:
+    id: export-format
+- assertVisible:
+    id: export-target
+- assertVisible:
+    id: export-start
+- tapOn:
+    id: export-close
+- assertNotVisible:
+    id: export-dialog

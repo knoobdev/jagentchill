@@ -1,0 +1,7 @@
+appId: dev.jagentchill.devclient
+---
+# Start with one recent local project named New project that has no cover.
+- assertVisible: Recent projects
+- assertVisible: New project
+- assertVisible:
+    id: project-placeholder-initial

@@ -1,0 +1,15 @@
+{
+  "name": "@jagentchill/app-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure TypeScript logic of the app shell and the Projects screens: lists, selection, naming, folders, trash, canvas rules, navigation and routes.",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "test": "node --test \"test/*.test.ts\"" },
+  "dependencies": {
+    "@jagentchill/editor-core": "workspace:*",
+    "@jagentchill/protocol": "workspace:*",
+    "@jagentchill/storage": "workspace:*"
+  },
+  "devDependencies": { "@types/node": "^26.6.4" }
+}

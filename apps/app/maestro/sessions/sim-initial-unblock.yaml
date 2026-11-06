@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    text: Close
+- waitForAnimationToEnd
+- tapOn:
+    text: Devices
+- waitForAnimationToEnd
+- takeScreenshot: sim-initial-hosts.png

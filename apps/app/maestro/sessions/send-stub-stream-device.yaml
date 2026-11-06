@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- assertVisible:
+    id: composer-input
+- tapOn:
+    id: composer-input
+- inputText: '#script {"steps":[{"say":"The local stub streamed this answer.","chunks":8,"chunk_ms":200,"hold_ms":2500}]}'
+- tapOn:
+    id: composer-send
+- assertVisible: Working
+- takeScreenshot: session-working-line.png
+- extendedWaitUntil:
+    visible: The local stub streamed this answer.
+    timeout: 15000

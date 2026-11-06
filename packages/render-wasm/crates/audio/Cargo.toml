@@ -1,0 +1,11 @@
+[package]
+name = "audio"
+version = "0.1.0"
+edition = "2024"
+description = "Audio processing of the engine: the WSOLA time-stretch that keeps pitch under a speed change and shifts pitch."
+
+[lib]
+path = "src/audio.rs"
+crate-type = ["rlib"]
+
+[dependencies]

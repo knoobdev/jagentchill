@@ -1,0 +1,5 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "306969"
+- waitForAnimationToEnd
+- assertVisible: This computer

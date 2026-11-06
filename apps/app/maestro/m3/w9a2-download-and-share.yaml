@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: host-export-download
+- assertVisible: Downloaded
+- tapOn:
+    id: host-export-share
+- waitForAnimationToEnd:
+    timeout: 3000

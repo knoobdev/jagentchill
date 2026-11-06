@@ -1,0 +1,14 @@
+appId: dev.jagentchill.devclient
+---
+- inputText: "${D1}"
+- inputText: "${D2}"
+- inputText: "${D3}"
+- inputText: "${D4}"
+- inputText: "${D5}"
+- inputText: "${D6}"
+- waitForAnimationToEnd:
+    timeout: 15000
+- assertVisible: New project
+- assertVisible: JAgentChill
+- assertVisible:
+    id: home-composer-dock

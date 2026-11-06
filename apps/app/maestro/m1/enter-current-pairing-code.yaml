@@ -1,0 +1,10 @@
+appId: dev.jagentchill.devclient
+---
+- tapOn:
+    id: pairing-verification-code
+- inputText: ${PAIR_CODE}
+- tapOn: Pair
+- waitForAnimationToEnd
+- assertVisible: New project
+- assertVisible:
+    id: composer-send

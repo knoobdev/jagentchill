@@ -1,0 +1,9 @@
+appId: dev.jagentchill.devclient
+---
+# Run on a session fixture with a completed tool step.
+- assertVisible:
+    id: activity-group
+- assertVisible:
+    id: tool-title
+- assertVisible:
+    id: tool-summary
